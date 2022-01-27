@@ -17,7 +17,7 @@ class CreateMateriasTable extends Migration
             $table->id();
             $table->string('sigla');
             $table->string('nombre');
-            $table->integer('cupo');
+            $table->integer('inscritos');
 
             $table->timestamps();
         });
