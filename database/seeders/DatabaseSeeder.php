@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(CarreraSeed::class);
         $this->call(MateriaSeed::class);
+        $this->call(EstudianteSeed::class);
 
     }
 }

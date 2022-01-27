@@ -18,7 +18,7 @@ class CreateEstudiantesTable extends Migration
             $table->string('registro');
             $table->string('nombre');
             $table->unsignedBigInteger('carrera_id')->nullable();
-            $table->string('estado');
+            $table->boolean('estado');
             $table->foreign('carrera_id')->references('id')->on('carreras')->onDelete('set null')->onUpdate('cascade');
             $table->timestamps();
         });
