@@ -21,7 +21,7 @@
     @livewire('navigation')
     
     @yield('content')
-
+    
     @stack('css')
     @yield('css')
 
