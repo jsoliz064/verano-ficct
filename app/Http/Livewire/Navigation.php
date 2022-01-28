@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
+
 class Navigation extends Component
 {
     public function render()
