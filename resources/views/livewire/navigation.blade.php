@@ -20,11 +20,12 @@
     </div>
     <div id="icon-menu">
         <i class="fas fa-bars"></i>
+
     </div>
 </header>
-<!--Portada Principal-->
+<!--Portada Principal
 <div class="container-all" id="move-content">
     <div class="container-cover">
     </div>
-</div>
+</div>-->
 <script src="{{ asset('js/menu.js') }}"></script>

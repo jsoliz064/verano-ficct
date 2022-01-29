@@ -29,6 +29,7 @@
 
 <body>
     @livewire('navigation')
+    @livewire('formulario')
     @yield('content')
 
     @stack('css')

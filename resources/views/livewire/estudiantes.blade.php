@@ -42,9 +42,9 @@
                                 {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
                                 <a class="btn btn-dark btn-sm" href="" style="background-color:#050505;color:#ffff">
                                     @if (!$estudiante->estado)
-                                        Habilitar
+                                        <i class="fas fa-edit"></i> Habilitar
                                     @else
-                                        Deshabilitar
+                                        <i class="fas fa-edit"></i> Deshabilitar
                                     @endif
                                 </a>
                                 <button class="btn btn-danger btn-sm"
