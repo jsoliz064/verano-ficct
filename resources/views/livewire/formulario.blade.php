@@ -1,9 +1,9 @@
 <div id="move-content">
     <div class="formuario-div">
         <br><br><br><br><br>
-        <div class="container">
+        <div class="">
             <form class="well form-horizontal" action=" " method="post" id="contact_form"
-                style="background-color:#222222;color:#ffff">
+                style="background-color:transparent;color:#ffff">
                 <!--<fieldset>-->
                 <!-- Form Name -->
                 <p style="color:#ffff;text-align: center;font-size: 20px;"><i class="fas fa-file-alt"></i> Formulario</p>
@@ -12,7 +12,7 @@
                     <label class="col-md-4 control-label">Nombre</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <span class="input-group-addon" style="background-color:#222222;color:#ffff"><i
+                            <span class="input-group-addon" style="background-color:rgb(47, 47, 47);color:#ffff"><i
                                     class="glyphicon glyphicon-user"></i></span>
                             <input name="first_name" placeholder="Nombre Completo" class="form-control" type="text">
                         </div>
