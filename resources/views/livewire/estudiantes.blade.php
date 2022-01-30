@@ -11,6 +11,7 @@
                         <th>Registro </th>
                         <th>Nombre</th>
                         <th>Carrera</th>
+                        <th>Telefono</th>
                         <th>Estado</th>
                         <th>Accion</th>
                     </tr>
@@ -23,6 +24,7 @@
                         <td>{{ $estudiante->registro }}</td>
                         <td>{{ $estudiante->nombre }}</td>
                         <td>{{ $estudiante->carrera->nombre }}
+                        <td>{{ $estudiante->telefono }}</td>
                         </td>
                         <td>
                             @if ($estudiante->estado)
