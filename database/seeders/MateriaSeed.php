@@ -38,5 +38,11 @@ class MateriaSeed extends Seeder
             'nombre'=> 'Calculo 1',
             'inscritos'=> 0,
         ])->carreras()->attach([1,2,3]);
+
+        Materia::create([
+            'sigla'=> 'ADM320',
+            'nombre'=> 'Finanzas para la Empresa',
+            'inscritos'=> 0,
+        ])->carreras()->attach([1]);
     }
 }
