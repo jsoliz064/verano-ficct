@@ -16,7 +16,5 @@ class Estudiantes extends Component
         return view('livewire.estudiantes');
     }
 
-    public function crear(){
-
-    }
+    
 }
