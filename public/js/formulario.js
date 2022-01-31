@@ -1,4 +1,3 @@
-﻿
 function validarFormulario() {
     var verificar = true;
     var expRegnombre = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]{1,}([\s][A-Za-zÁáÉéÍíÓóÚúÜüÑñ]{1,})+$/;
@@ -86,24 +85,28 @@ function validarFormulario() {
     }
 }
 
-
+function mostrarError(msj) {
+    $("#mensaje").text(msj);
+    $("#tipo").addClass("fa-times").removeClass("fa-check");
+    $(".mostrar-mensaje").removeClass("correcto").addClass("error show");
+}
 
 
 window.alert = function(titulo, descricao) {
     // do something here
-    $('.alerta').find('.titulo').html(titulo);
+    $('.alerta').find('.titulo4').html(titulo);
     $('.alerta').find('.descricao').html(descricao);
-    $('.alerta').stop(true, true).fadeIn(1000);
+    $('.alerta').stop(true, true).fadeIn(20000);
 };
 
 $('.fechar').on('click', function() {
-    $('.alerta').stop(true, true).fadeOut(1000);
+    $('.alerta').stop(true, true).fadeOut(200);
 });
 
 window.setTimeout(function() {
     //console.log('Inscripción Exitosa');
     alert('Inscripción Exitosa', ':)');
-}, 2000);
+}, 200);
 
 
 function alerta() {

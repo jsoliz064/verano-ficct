@@ -128,13 +128,15 @@
                 <div class="form-group" align="center">
                     <button wire:click.prevent="guardar()" onClick="alerta()" type="button"
                         class="btn2">Inscribir <span class="glyphicon glyphicon-send"></span></button>
+
+
                     @if (session()->has('message'))
                         <div class="form-group">
                             <div class="col-md-4" align="center">
                                 <!--<h4>{{ session('message') }}</h4>-->
 
 
-                                <div class="alerta">
+                                <div class="alerta" align="center">
                                     <div class="titulo4"></div>
                                     <div class="descricao"></div>
                                     <div class="fechar">{{ session('message') }}</div>
@@ -150,5 +152,7 @@
     </div><!-- /.container -->
 </div>
 </div>
+<!-- /.container -->
+
 
 <script src="{{ asset('js/formulario.js') }}"></script>
