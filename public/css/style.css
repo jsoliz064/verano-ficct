@@ -6,20 +6,18 @@
     font-family: sans-serif;
 }
 
-
 /* FORMULARIO =================================== */
-
 
 /* Informacion de Contacto*/
 
 .cantact_info::before {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: #4091EC;
+    background: #4091ec;
     opacity: 0.9;
 }
 
@@ -30,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('../fondo.jpg');
+    background-image: url("../fondo.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -76,7 +74,6 @@
     margin-right: 15px;
     margin-left: 4px;
 }
-
 
 /*Formulario */
 
@@ -127,9 +124,7 @@
     background-color: #e05757;
 }
 
-
 /*Formulario */
-
 
 /*alerta*/
 
@@ -170,7 +165,6 @@
     cursor: pointer;
 }
 
-
 /*alerta*/
 
 .container-all {
@@ -183,9 +177,8 @@
     left: 0;
     width: 100%;
     height: 70px;
-    background: #141e30;
-    box-shadow: 0 4px 20px -25px #141e30;
-    ;
+    background: #7f1d1d;
+    box-shadow: 0 4px 20px -25px;
     z-index: 2;
 }
 
@@ -230,7 +223,7 @@
 }
 
 .menu-selected:before {
-    content: '';
+    content: "";
     width: 100%;
     height: 5px;
     background: #fcf100;
@@ -280,7 +273,6 @@
     opacity: 0.8;
 }
 
-
 /* Portada Principal */
 
 .container-cover {
@@ -296,7 +288,7 @@
 }
 
 .container-cover:before {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     /*background: rgba(0, 255, 0, 0.3);*/
@@ -318,7 +310,7 @@
     flex-direction: column;
     position: relative;
     /*color texto*/
-    color: #FFFF;
+    color: #ffff;
     /*color botón*/
     background: #222222;
     /*bordes redondos*/
@@ -331,7 +323,7 @@
     /*decoración texto*/
     text-transform: uppercase;
     /*capitalización texto*/
-    font-family: 'Helvetica', sans-serif;
+    font-family: "Helvetica", sans-serif;
     /*tipografía texto*/
 }
 
@@ -353,14 +345,13 @@
     opacity: 0.9;
 }
 
-
 /*Footer - Pie de Página*/
 
 .container-footer {
     width: 100%;
     margin-top: 50px;
     padding: 40px 0;
-    background: #2E2E2E;
+    background: #2e2e2e;
 }
 
 .container-footer footer {
@@ -387,14 +378,14 @@
 .container-footer footer .redes-footer .icon-redes-footer {
     font-size: 20px;
     margin: 20px;
-    background: #BDBDBD;
+    background: #bdbdbd;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    color: #2E2E2E;
+    color: #2e2e2e;
 }
 
 footer .redes-footer .fa-facebook:hover {
@@ -416,16 +407,15 @@ footer .redes-footer .fa-paypal:hover {
     margin-top: 20px;
     border: none;
     height: 2px;
-    background: #BDBDBD;
+    background: #bdbdbd;
 }
 
 .container-footer h4 {
     text-align: center;
     margin-top: 40px;
-    color: #BDBDBD;
+    color: #bdbdbd;
     font-weight: 500;
 }
-
 
 /*Responsive Design - Adaptable a dispositivos móviles*/
 
