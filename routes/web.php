@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
+use App\Http\Livewire\Estudiantes;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +20,13 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('prueba');
 })->name('dashboard');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('materias', function () {
+    return view('materia.index');
+})->name('materias.index');

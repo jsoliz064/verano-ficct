@@ -9,10 +9,10 @@
             <nav>
                 <ul>
                     <li class="menu-selected">
-                        <a href="#" class="text-menu-selected">
+                        <a href="{{url('/')}}" class="text-menu-selected">
                             <i class="fas fa-home"></i>Inicio</a>
                     </li>
-                    <li><a href="#" class="text-menu-selected"><i class="fas fa-book"></i>Ver Inscritos</a></li>
+                    <li><a href="{{route('materias.index')}}" class="text-menu-selected"><i class="fas fa-book"></i>Ver Inscritos</a></li>
                     <li><a href="#" class="text-menu-selected"><i class="fas fa-address-book"></i>Contactanos</a></li>
                 </ul>
             </nav>
