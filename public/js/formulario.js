@@ -96,11 +96,11 @@ window.alert = function(titulo, descricao) {
     // do something here
     $('.alerta').find('.titulo4').html(titulo);
     $('.alerta').find('.descricao').html(descricao);
-    $('.alerta').stop(true, true).fadeIn(20000);
+    $('.alerta').stop(true, true).fadeIn(50000);
 };
 
 $('.fechar').on('click', function() {
-    $('.alerta').stop(true, true).fadeOut(200);
+    $('.alerta').stop(true, true).fadeOut(50000);
 });
 
 window.setTimeout(function() {
