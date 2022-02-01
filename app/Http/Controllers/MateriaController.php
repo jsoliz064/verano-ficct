@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Materia;
+use App\Models\Estudiante;
+
 use Illuminate\Http\Request;
 
 class MateriaController extends Controller
@@ -12,6 +14,12 @@ class MateriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function show2($materia_id)
+    {
+        
+        return view('estudiante.index',compact('materia_id'));
+    }
+
     public function index()
     {
         //

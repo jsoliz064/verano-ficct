@@ -3,7 +3,7 @@
 @section('title','Materias')
 
 @section('content')
-    @livewire('materias')
+    @livewire('estudiantes',['materia'=>$materia_id])
 @stop
 
 @section('css')

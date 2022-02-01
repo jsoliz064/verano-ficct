@@ -38,18 +38,15 @@
                             @endif
                         </td>
                         <td>
-                            <form action="" method="post">
-                                @csrf
-                                @method('delete')
-                                {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
-                                <a class="btn btn-dark btn-sm" href="" style="background-color:#050505;color:#ffff">
+                            <form>
+                                <a wire:click.prevent="habilitar({{$estudiante->id}})" class="btn btn-dark btn-sm" href="" style="background-color:#050505;color:#ffff">
                                     @if (!$estudiante->estado)
                                         <i class="fas fa-edit"></i> Habilitar
                                     @else
                                         <i class="fas fa-edit"></i> Deshabilitar
                                     @endif
                                 </a>
-                                <button class="btn btn-danger btn-sm"
+                                <button wire:click.prevent="eliminar({{$estudiante->id}})" class="btn btn-danger btn-sm"
                                     onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">
                                     <i class="fas fa-trash-alt">
                                     </i> Eliminar</button>

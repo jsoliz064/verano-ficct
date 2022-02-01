@@ -39,10 +39,10 @@
                     <td>{{ $materia->inscritos }}</td>
                     <td>
                         <form>
-                            <a class="btn btn-dark btn-sm" href="" style="background-color:#050505;color:#ffff">
+                            <a class="btn btn-dark btn-sm" href="{{route('materia.estudiantes.show',$materia->id)}}" style="background-color:#050505;color:#ffff">
                                     <i class="fas fa-edit"></i> Ver Estudiantes
                             </a>
-                            <button class="btn btn-danger btn-sm"
+                            <button wire:click="eliminar({{$materia->id}})" class="btn btn-danger btn-sm"
                                 onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">
                                 <i class="fas fa-trash-alt">
                                 </i> Eliminar</button>

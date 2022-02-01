@@ -36,7 +36,6 @@ class Formulario extends Component
                 'estado'=>false,
             ]);
             if ($this->materia2!=null){
-
                 $estudiante->materias()->attach([$this->materia1,$this->materia2]);
             }else{
                 $estudiante->materias()->attach($this->materia1);
