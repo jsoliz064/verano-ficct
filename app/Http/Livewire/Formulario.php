@@ -6,27 +6,41 @@ use Livewire\Component;
 use App\Models\Estudiante;
 use App\Models\Carrera;
 use App\Models\Materia;
+use Illuminate\Support\Facades\DB;
+
 
 class Formulario extends Component
 {
-    public $nombre,$registro,$carrera_id,$carreras,$telefono,$buscar;
+    public $nombre,$registro,$carrera_id,$carreras,$telefono,$buscar,$materia1,$materia2,$materias;
 
     public function render()
     {
         $this->carreras=Carrera::all();
-        $materias=Materia::where('nombre','LIKE','%'.$this->buscar.'%')->get();
-        return view('livewire.formulario',compact('materias'));
+        //para buscar materia 
+        //$materias=Materia::where('nombre','LIKE','%'.$this->buscar.'%')->get();
+        if ($this->carrera_id!=null){
+            $this->materias=Carrera::find($this->carrera_id)->materias;
+        }else{
+            $this->materias=Materia::all();
+        }
+        return view('livewire.formulario');
     }
     public function guardar(){
-        if ($this->carrera_id!=null)
+        if ($this->carrera_id!=null && $this->materia1!=null)
         {
-            Estudiante::create([
+            $estudiante=Estudiante::create([
                 'registro'=>$this->registro,
                 'nombre'=>$this->nombre,
                 'carrera_id'=>$this->carrera_id,
                 'telefono' =>$this->telefono,
                 'estado'=>false,
             ]);
+            if ($this->materia2!=null){
+
+                $estudiante->materias()->attach([$this->materia1,$this->materia2]);
+            }else{
+                $estudiante->materias()->attach($this->materia1);
+            }
         }
         $this->limpiar();
         session()->flash('message','Inscripción Exitosa');
@@ -36,6 +50,8 @@ class Formulario extends Component
         $this->registro="";
         $this->carrera_id="";
         $this->telefono="";
+        $this->materia1="";
+        $this->materia2="";
     }
     
 }

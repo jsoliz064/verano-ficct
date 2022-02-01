@@ -3,10 +3,13 @@
 @section('title','Inicio')
 
 @section('content')
-    @livewire('estudiantes')
+    @livewire('formulario')
+
+    {{--  @livewire('estudiantes')  --}}
 @stop
 
 @section('css')
+
 @stop
 
 @section('js')

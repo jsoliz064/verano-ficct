@@ -2,15 +2,18 @@
     <div class="formuario-div">
         <br><br><br><br><br>
         <div class="container">
+
+
+
             <form class="formulario well form-horizontal" id="contact_form"
-                style="background-color:#222222;color:#ffff;box-sizing: border-box;box-shadow: 0 15px 25px #afbecf;border-radius: 15px;">
+                style="background-color:#141e30;;color:#ffff;box-sizing: border-box;box-shadow: 0 15px 25px #afbecf;border-radius: 15px;">
                 <!--<fieldset>-->
                 <!-- Form Name -->
-                <p style="color:#ffff;text-align: center;font-size: 20px;">
-                    <i class="fas fa-file-alt my-4"></i>
-                    REGISTRA
-                    TUS MATERIAS
-                </p>
+                <section class="info_title">
+                    <span class="fa fa-user-circle"></span>
+                    <h2>REGISTRA<br>TUS MATERIAS</h2>
+                </section>
+
                 <!-- Text input-->
                 <div class="form-group">
                     <label class="col-md-4 control-label">Nombre Completo</label>
@@ -63,7 +66,8 @@
                         <div class="input-group">
                             <span class="input-group-addon" style="background-color:rgb(47, 47, 47);color:#ffff"><i
                                     class="fab fa-buffer"></i></span>
-                            <select id="carrera" wire:model="carrera_id" name="state" class="form-control selectpicker">
+                            <select id="carrera" wire:model="carrera_id" name="carrera"
+                                class="form-control selectpicker">
                                 <option value="">Seleccione una opción</option>
                                 @foreach ($carreras as $carrera)
                                     <option value="{{ $carrera->id }}">
@@ -86,12 +90,14 @@
                         <div class="input-group">
                             <span class="input-group-addon" style="background-color:rgb(47, 47, 47);color:#ffff"><i
                                     class="glyphicon glyphicon-list"></i></span>
-                            <select id="materia" name="state" class="form-control selectpicker">
-                                <option value=" ">Selccione una opcion</option>
-                                <option>Calculo</option>
-                                <option>Fisica</option>
-                                <option>Ingles</option>
-
+                            <select id="materia1" wire:model="materia1" name="materia1"
+                                class="mi-selector1 form-control selectpicker">
+                                <option value="">Selccione una opcion</option>
+                                @foreach ($materias as $materia)
+                                    <option value="{{ $materia->id }}">
+                                        {{ $materia->nombre }}
+                                    </option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -100,28 +106,21 @@
                 <!-- Text input-->
                 <div class="form-group">
                     <label class="col-md-4 control-label">Materia 2</label>
-                    <div class="col-md-4 inputGroupContainer">
+                    <div class="col-md-4 selectContainer">
                         <div class="input-group">
-                            <span class="input-group-addon" style="background-color:rgb(47, 47, 47);color:#ffff">
-                                <i class="fas fa-search"></i></span>
-                            <input id="materia" wire:model="buscar" name="materia" placeholder="Buscar Materia"
-                                class="form-control" pattern="[0-9]{10,40}" size="10" min="10" maxlength="10" max="40"
-                                type="text" required>
-
+                            <span class="input-group-addon" style="background-color:rgb(47, 47, 47);color:#ffff"><i
+                                    class="glyphicon glyphicon-list"></i></span>
+                            <select id="materia2" wire:model="materia2" name="materia2"
+                                class="mi-selector2 form-control selectpicker ">
+                                <option value="">Selccione una opcion</option>
+                                @foreach ($materias as $materia)
+                                    <option value="{{ $materia->id }}">
+                                        {{ $materia->nombre }}
+                                    </option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
-                    <br><br>
-                    @foreach ($materias as $materia)
-                        <div class="form-check"
-                            style=" background-color: yellow;padding: 1px;margin: 1px; ;color:#ffff">
-                            <input
-                                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                                type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
-                                {{ $materia->nombre }}
-                            </label>
-                        </div>
-                    @endforeach
                 </div>
 
                 <!-- Button -->
@@ -151,8 +150,9 @@
         </div>
     </div><!-- /.container -->
 </div>
-</div>
-<!-- /.container -->
 
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 <script src="{{ asset('js/formulario.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="{{ asset('js/mi-script.js') }}"></script>
