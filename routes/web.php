@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Livewire\Estudiantes;
+use App\Http\Controllers\MateriaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +32,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('materias', function () {
     return view('materia.index');
 })->name('materias.index');
+
+Route::get('materias-estudiantes/{materia_id}',[MateriaController::class,'show2'])->name('materia.estudiantes.show');

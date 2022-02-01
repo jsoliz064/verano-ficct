@@ -91,7 +91,7 @@
                             <span class="input-group-addon" style="background-color:rgb(47, 47, 47);color:#ffff"><i
                                     class="glyphicon glyphicon-list"></i></span>
                             <select id="materia1" wire:model="materia1" name="materia1"
-                                class="mi-selector1 form-control selectpicker">
+                                class="form-control selectpicker">
                                 <option value="">Selccione una opcion</option>
                                 @foreach ($materias as $materia)
                                     <option value="{{ $materia->id }}">
@@ -111,7 +111,7 @@
                             <span class="input-group-addon" style="background-color:rgb(47, 47, 47);color:#ffff"><i
                                     class="glyphicon glyphicon-list"></i></span>
                             <select id="materia2" wire:model="materia2" name="materia2"
-                                class="mi-selector2 form-control selectpicker ">
+                                class="form-control selectpicker ">
                                 <option value="">Selccione una opcion</option>
                                 @foreach ($materias as $materia)
                                     <option value="{{ $materia->id }}">

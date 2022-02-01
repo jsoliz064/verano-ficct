@@ -9,11 +9,11 @@ class Materia extends Model
 {
     use HasFactory;
     protected $table="materias";
-    protected $fillable=['nombre'];
+    protected $guarded=['id','created_at','updated_at'];
 
-    //Relacion uno a muchos
+    //Relacion muchos a muchos
     public function estudiantes(){
-        return $this->hasMany('App\Models\Estudiante');
+        return $this->belongsToMany('App\Models\Estudiante');
     }
 
     //Relacion muchos a muchos
