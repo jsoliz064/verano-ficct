@@ -48,7 +48,7 @@ class ShowMateria extends Component
 
     public function render()
     {
-        $materiasa = Materia::where('sigla', 'like', '%' . $this->search . '%')
+        $materiasa = Materia::where('nombre', 'like', '%' . $this->search . '%')
             ->orWhere('nombre', 'like', '%' . $this->search . '%')
             ->paginate($this->cant);
         return view('livewire.show-materia', compact('materiasa'));

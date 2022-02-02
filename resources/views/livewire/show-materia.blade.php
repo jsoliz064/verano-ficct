@@ -23,14 +23,13 @@
                 </select>
                 <span class="mr-2 font-bold">Buscar</span>
             </div>
-            {{ $search }}
             <x-jet-input type="text" class="flex-1 mr-5 rounded-full w-full p-3 text-2xl"
                 placeholder="Escriba el nombre de la materia" wire:model="search" />
             <button wire:click="crear()" class="btn btn-primary mr-2">Registrar Materia</button>
         </div>
         <div class="card-body table-responsive">
             {{-- @auth() --}}
-
+ 
             @if ($modal)
                 @include('livewire.crearmateria')
             @endif
