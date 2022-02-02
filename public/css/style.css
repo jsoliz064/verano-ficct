@@ -1,3 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,200');
+.container4 {
+    position: absolute;
+    max-width: 225px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 42px;
+    margin: 0;
+    line-height: 47px;
+    letter-spacing: 2px;
+}
+
+.title {
+    transform: translateX(-50%) rotate(-10deg);
+    display: block;
+    float: left;
+    left: 50%;
+    position: relative;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,164 +33,315 @@
     font-family: sans-serif;
 }
 
+.background {
+    background-image: url(../imagenes/2017-04-25.jpg);
+}
+
+
 /* FORMULARIO =================================== */
 
-/* Informacion de Contacto*/
-
-.cantact_info::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #4091ec;
-    opacity: 0.9;
-}
-
-.cantact_info {
-    width: 38%;
-    position: relative;
+.page2 {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../fondo.jpg");
-    background-size: cover;
-    background-position: center center;
+    min-height: 110vh;
 }
 
-.info_title,
-.info_items {
-    position: relative;
-    z-index: 2;
-    color: #fff;
+.container2 {
+    width: 100%;
+    max-width: 380px;
+    z-index: 1;
+    /*background-color: #880000;*/
 }
 
-.info_title {
-    margin-bottom: 60px;
-}
-
-.info_title span {
-    font-size: 100px;
-    display: block;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.info_title h2 {
-    font-size: 35px;
-    text-align: center;
-}
-
-.info_items p {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.info_items p:nth-child(1) span {
-    font-size: 30px;
-    margin-right: 10px;
-}
-
-.info_items p:nth-child(2) span {
-    font-size: 50px;
-    margin-right: 15px;
-    margin-left: 4px;
-}
-
-/*Formulario */
-
-#success_message {
-    display: none;
-}
-
-.formuario-div {
-    background: url(../imagenes/2017-04-25.jpg);
-    background-size: cover;
+.formulario2 {
+    background: linear-gradient(-225deg, #013f7a, #fafafa);
+    opacity: 0.9;
+    padding: 25px;
+    width: auto;
+    /*width: 350;*/
+    color: #ffff;
     box-sizing: border-box;
-    box-shadow: 0 15px 25px #afbecf;
-}
-
-.formulario {
-    background: #141e30;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px #afbecf;
-    border-radius: 25px;
+    box-shadow: 0 15px 18px #afbecf;
+    border-radius: 8px;
     transform: translate(0%);
     margin: auto;
-    color: rgb(255, 255, 255);
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     background-repeat: no-repeat;
 }
 
-.btn2 input:hover {
-    background-color: #fa4235;
+
+/* BACKGROUND 
+
+    */
+
+.background,
+.backdrop {
+    background-color: #3f689c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
 }
 
-.btn2 {
+.backdrop {
+    background: #333333;
+    filter: alpha(opacity=90);
+    opacity: .8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+
+/* HEADER */
+
+.header2 {
     text-align: center;
-    background-color: #e05757;
-    border: none;
-    color: white;
-    padding: 8px 70px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: bold;
+    /* opacity: 0.9;
+    border-radius: 2px;
+    background-image: url(../imagenes/2017-04-25.jpg);
+background-color: #e05757;
+    */
+    width: auto;
+    height: 200px;
+    font-weight: lighter;
+    margin: 10px 0;
+}
+
+
+/* imagene-logo */
+
+.imagen:hover {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 10px 10px #ec3d1e;
+    -webkit-box-shadow: 0px 0px 10px 10px #ec361e;
+}
+
+
+/* imagene-logo */
+
+
+/* letra escribe automaticamente */
+
+.hidden {
+    opacity: 0;
+}
+
+.console-container {
+    font-family: Khula;
+    font-size: 25px;
     display: block;
-    text-decoration: none;
+    top: 0;
+    margin: auto;
 }
 
-.btn2 input:hover {
-    background-color: #e05757;
-}
-
-/*Formulario */
-
-/*alerta*/
-
-.alerta {
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -100px;
-    margin-top: -50px;
-    background: rgb(240, 61, 61);
-    border-radius: 5px;
-    padding: 10px;
-    font-family: Arial;
-    display: none;
-}
-
-.titulo4 {
-    text-align: center;
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    color: rgb(246, 241, 241);
+    top: -0.14em;
     font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    font-size: 25px;
 }
 
-.descricao {
-    text-align: center;
-    font-weight: bold;
-    font-size: 11px;
-    margin: 16px 0;
+
+/* letra escribe automaticamente */
+
+
+/* logo 
+
+.formulario2 .header2 .logo2 {
+    border: 1px solid #CCC;
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 870px;
+    height: 807px;
+    background-color: red;
 }
 
-.fechar {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
+
+.formulario2 .header2 .logo2 .logo-area2 {
+    border: 1px solid rgb(88, 88, 88);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+}
+*/
+
+
+/* INPUT */
+
+.formulario2 .icone {
+    width: 30px;
+    vertical-align: middle;
+    border: 0;
+    /**/
+    padding: 0;
+    /**/
+}
+
+.formulario2 .input2 {
+    border-bottom: 1px solid #CCCCCC;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #9e9e9e;
+    padding-bottom: 5px;
+}
+
+.formulario2 .input2 input {
+    border: 0;
+    width: calc(100% - 71px);
+    padding: 0;
+    /**/
+}
+
+.formulario2 .input2 input:focus {
+    outline: none;
+}
+
+.formulario2 #show-password {
     cursor: pointer;
 }
+
+
+/* EXTRAS */
+
+.formulario2 .remember {
+    margin-top: 15px;
+}
+
+.formulario2 .remember a {
+    float: right;
+}
+
+.formulario2 .remember span {
+    vertical-align: top;
+}
+
+
+/* BOTOES */
+
+.formulario2 .btn {
+    cursor: pointer;
+    display: block;
+    border: 0;
+    height: 20px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    transition: background .3s;
+}
+
+.formulario2 .btn:focus {
+    outline: none;
+}
+
+.formulario2 .btn-login {
+    background: #e05757;
+    color: #FFFFFF;
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+}
+
+.formulario2 .btn-login:hover {
+    background: #f56565;
+    color: #FFFFFF;
+}
+
+.formulario2 .btn-registrar {
+    background: #dbdbdb;
+    color: #676464;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.formulario2 .btn-registrar:hover {
+    background: #cdcdcd;
+}
+
+
+/* SEPARADOR */
+
+.formulario2 .separator {
+    margin: 20px 0;
+    border-top: 1px solid #CCCCCC;
+    position: relative;
+}
+
+.formulario2 .separator-text {
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    margin-left: -22px;
+    padding: 0px 10px;
+    background: #FFFFFF;
+    color: #8a8a8a;
+}
+
+
+/* SOCIAL MEDIA LOGIN */
+
+.formulario2 .btn-face {
+    background: #3b5998;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: left;
+}
+
+.formulario2 .btn-face:hover {
+    background: #324b80;
+}
+
+.formulario2 .btn-google {
+    background: #ef0a0a;
+    color: #FFFFFF;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.formulario2 .btn-google:hover {
+    background: #d40909;
+}
+
+.formulario2 .btn-icone {
+    border-right: 1px solid #FFFFFF;
+    margin-right: 14px;
+    margin-top: -4px;
+    padding-right: 10px;
+    width: 25px;
+    font-size: 16x;
+    vertical-align: middle;
+}
+
+.formulario2 .socmed-login .btn span {
+    display: inline-block;
+    width: calc(100% - 55px);
+    height: 100%;
+    text-align: center;
+}
+
+@media (max-width: 261px) {
+    .xs-hidden {
+        display: none !important;
+    }
+}
+
+@media (min-width: 262px) {
+    .xs-show {
+        display: none !important;
+    }
+}
+
 
 /*alerta*/
 
@@ -273,6 +451,7 @@
     opacity: 0.8;
 }
 
+
 /* Portada Principal */
 
 .container-cover {
@@ -345,6 +524,7 @@
     opacity: 0.9;
 }
 
+
 /*Footer - Pie de Página*/
 
 .container-footer {
@@ -416,6 +596,7 @@ footer .redes-footer .fa-paypal:hover {
     color: #bdbdbd;
     font-weight: 500;
 }
+
 
 /*Responsive Design - Adaptable a dispositivos móviles*/
 
@@ -499,4 +680,9 @@ footer .redes-footer .fa-paypal:hover {
     .container-aside {
         flex-wrap: wrap;
     }
+}
+
+
+}
+
 }
