@@ -5,30 +5,27 @@
         <div class="formulario2">
             <!-- HEADER -->
             <div class="header2">
-                <div class="logo2">
-                    <div class="logo-area2">
-                        <!--<span class="red">/</span><span class="big">Support</span>>-->
-                        <center>
-                            <img src="{{ asset('imagenes/logo.png') }}" width="200">
-                        </center>
-                    </div>
+                <section class="container4">
+                    <h1>
+                        <span class="title">Verano</span>
+                        <span class="title">Inscribete</span>
+                        <span class="title">gogoo</span>
+                    </h1>
+                </section>
+                <center>
+                    <img class="imagen" src="{{ asset('imagenes/logo.png') }}" width="150">
+                </center>
 
+
+
+                <div class='console-container'><span id='text'></span>
+                    <div class='console-underscore' id='console'>|</div>
                 </div>
+                <!--TextMoviento-->
 
-
-                <h3>
-
-                    <div class="contenedor9">
-                        <!--<p>><span>_</span></p>-->
-                        <p> VERANO 3/2021.....<span>&#160;</span></p>
-                    </div>
-                </h3>
             </div>
+
             <div class="container2">
-
-
-
-
                 <form id="contact_form">
                     <!--<fieldset>-->
                     <!-- Text input-->
