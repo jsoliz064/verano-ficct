@@ -5,18 +5,22 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Materia;
 use App\Models\Carrera;
+use Livewire\WithPagination;
 
-class Materias extends Component
+class ShowMateria extends Component
 {
+    use WithPagination;
 
-    public $materias, $sigla, $nombre, $carrera_id, $carreras, $buscar;
+    public $materias, $sigla, $nombre, $carrera_id, $carreras;
+    public $search = "";
+    public $cant = 5;
     public $modal = false;
 
-    public function render()
+    protected $listeners = ['render', 'search' => '$refresh'];
+
+    public function updatingSearch()
     {
-        //$this->materias=Materia::all();
-        $this->materias = Materia::where('nombre', 'LIKE', '%' . $this->buscar . '%')->get();
-        return view('livewire.materias');
+        $this->resetPage();
     }
     public function crear()
     {
@@ -40,5 +44,13 @@ class Materias extends Component
     public function eliminar($materia_id)
     {
         Materia::find($materia_id)->delete();
+    }
+
+    public function render()
+    {
+        $materiasa = Materia::where('sigla', 'like', '%' . request('search') . '%')
+            ->orWhere('nombre', 'like', '%' . request('search') . '%')
+            ->paginate($this->cant);
+        return view('livewire.show-materia', compact('materiasa'));
     }
 }

@@ -125,8 +125,8 @@
 
                 <!-- Button -->
                 <div class="form-group" align="center">
-                    <button wire:click.prevent="guardar()" onClick="alerta()" type="button"
-                        class="btn2">Inscribir <span class="glyphicon glyphicon-send"></span></button>
+                    <button wire:click="guardar()" type="button" class="btn2">Inscribir <span
+                            class="glyphicon glyphicon-send"></span></button>
 
 
                     @if (session()->has('message'))
