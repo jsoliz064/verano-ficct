@@ -33,4 +33,7 @@ class Materias extends Component
         $this->nombre="";
         $this->carrera_id="";
     }
+    public function eliminar($materia_id){
+        Materia::find($materia_id)->delete();
+    }
 }
