@@ -1,4 +1,4 @@
-<div>
+<div class="card my-5">
     <x-table>
 
         <div class="card my-5">
