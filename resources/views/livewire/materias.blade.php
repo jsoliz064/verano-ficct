@@ -12,6 +12,7 @@
             </div>
         </form>
     </div>
+    {{--  MODERATE PRIMO  --}}
 
     <div class="card-body table-responsive">
         {{-- @auth() --}}
