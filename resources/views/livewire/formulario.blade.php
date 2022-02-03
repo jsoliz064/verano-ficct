@@ -130,8 +130,7 @@
 
                 <!-- Button -->
                 <div class="input-group">
-                    <button wire:click.prevent="guardar()" onClick="alerta()" type="button"
-                        class="btn-login">Inscribir
+                    <button wire:click.prevent="guardar()" type="button" class="btn-login">Inscribir
                     </button>
                     @if (session()->has('message'))
                         <h4>{{ session('message') }}</h4>

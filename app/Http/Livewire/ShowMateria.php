@@ -11,10 +11,10 @@ class ShowMateria extends Component
 {
     use WithPagination;
 
-    public $materias, $sigla, $nombre, $carrera_id, $carreras;
+    public $materias, $sigla, $nombre, $carrera_id, $docente, $semestre;
     public $search = "";
     public $cant = 5;
-    public $modal = false;
+    public $open = false;
 
     protected $listeners = ['render', 'search' => '$refresh'];
 
@@ -22,24 +22,14 @@ class ShowMateria extends Component
     {
         $this->resetPage();
     }
-    public function crear()
-    {
-        $this->limpiarCampos();
-        $this->abrirModal();
-    }
-    public function abrirModal()
-    {
-        $this->modal = true;
-    }
-    public function cerrarModal()
-    {
-        $this->modal = false;
-    }
+
+
     public function limpiarCampos()
     {
         $this->sigla = "";
         $this->nombre = "";
-        $this->carrera_id = "";
+        $this->semestre = "";
+        $this->docente = "";
     }
     public function eliminar($materia_id)
     {
@@ -49,7 +39,7 @@ class ShowMateria extends Component
     public function render()
     {
         $materiasa = Materia::where('nombre', 'like', '%' . $this->search . '%')
-            ->orWhere('nombre', 'like', '%' . $this->search . '%')
+            ->orWhere('sigla', 'like', '%' . $this->search . '%')
             ->paginate($this->cant);
         return view('livewire.show-materia', compact('materiasa'));
     }

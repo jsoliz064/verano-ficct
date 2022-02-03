@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ asset('imagenes/logo.png') }}" />
+    <link href="/dist/output.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    @livewireStyles
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a4b5036150.js" crossorigin="anonymous"></script>
@@ -26,11 +24,14 @@
         href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css'>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+
+
     <title>
         @yield('title','Verano')
     </title>
 
-
+    @livewireStyles
 
 </head>
 
@@ -38,14 +39,28 @@
     <div id="move-content">
     </div>
     @livewire('navigation')
-    @yield('content')
 
-    @stack('css')
-    @yield('css')
 
-    @livewireScripts
-    @stack('js')
-    @yield('js')
+    <div class="flex h-screen overflow-y-hidden bg-gray-100" x-data="setup()"
+        x-init="$refs.loading.classList.add('hidden')">
+
+        <!-- Loading screen -->
+
+        <div class="flex flex-col flex-1 h-full overflow-hidden">
+
+            <main class="flex-1 max-h-full p-5 py-1 overflow-hidden overflow-y-scroll">
+
+                @yield('content')
+
+            </main>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+        @livewireScripts
+        @stack('js')
+
+    </div>
+
 
 </body>
 

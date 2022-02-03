@@ -38,5 +38,4 @@ Route::get('materias', function () {
     return view('materia.index');
 })->name('materias.index');
 
-
 Route::get('materias-estudiantes/{materia_id}',[MateriaController::class,'show2'])->name('materia.estudiantes.show');
