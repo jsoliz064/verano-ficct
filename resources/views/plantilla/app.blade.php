@@ -36,6 +36,8 @@
 </head>
 
 <body>
+    <div id="move-content">
+    </div>
     @livewire('navigation')
 
 
@@ -53,7 +55,7 @@
             </main>
 
         </div>
-
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
         @livewireScripts
         @stack('js')
 

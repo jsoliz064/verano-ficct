@@ -40,11 +40,8 @@ class Formulario extends Component
             } else {
                 $estudiante->materias()->attach($this->materia1);
             }
-            $this->emit('alert', '¡La inscripción se realizó satisfactoriamente!');
-            return;
         }
         $this->limpiar();
-        $this->emit('alert', '¡La inscripción se realizó satisfactoriamente!');
     }
     public function limpiar()
     {

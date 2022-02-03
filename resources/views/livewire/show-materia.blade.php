@@ -11,16 +11,12 @@
 
         <div class="px-4 py-2 flex items-center">
             {{-- @endauth --}}
-
-            @if ($modal)
-                @include('livewire.crearmateria')
-            @endif
             <div class="flex items-center">
                 <span class="mr-2 font-bold ">Paginar</span>
                 <select wire:model='cant'
                     class="mr-2 px-8 py-2 border-gray-300 text-left text-md rounded-2xl font-medium text-black-600 uppercase tracking-wider ">
                     <option value="5">5</option>
-                    <option value="10">10</option>
+                    <option value="2">2</option>
                     <option value="20">20</option>
                     <option value="50">50</option>
                 </select>
@@ -28,16 +24,14 @@
             </div>
             <x-jet-input type="text" class="flex-1 mr-3 rounded-full w-full py-2 px-4 text-md"
                 placeholder="Escriba el nombre de la materia" wire:model="search" />
-            <a class="font-bold text-white text-md bg-red-500 rounded cursor-pointer hover:bg-red-600 py-2 px-4 "
-                wire:click="crear()" /> Registrar
-            </a>
+            <x-jet-danger-button
+                class="font-bold text-white text-md bg-red-500 rounded cursor-pointer hover:bg-red-600 py-2 px-4 "
+                wire:click="$set('open', true)"> Registrar
+            </x-jet-danger-button>
         </div>
         <div class=" card card-body">
             {{-- @auth() --}}
 
-            @if ($modal)
-                @include('livewire.crearmateria')
-            @endif
             @if (count($materiasa))
                 <table class=" table table-striped min-w-full divide-y divide-gray-200 text-md shadow-lg mt-4 border-5">
                     <thead class="rounded-3xl px-8 text-white" style="background-color: #D15238">
@@ -128,10 +122,60 @@
 
             @else
                 <div class="px-6 py-4">
-                    No hay materias
+                    No hay materias con ese nombre
                 </div>
             @endif
 
         </div>
     </x-table>
+
+    <x-jet-dialog-modal wire:model="open">
+
+        <x-slot name="title">
+            Crear materia:
+        </x-slot>
+
+        <x-slot name="content">
+
+            <div class="mb-4">
+                <x-jet-label value="Nombre de la Materia" />
+                <x-jet-input type="text" class="w-full" wire:model.defer="nombre"
+                    placeholder='Escriba el nombre' />
+
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Sigla de la Materia" />
+                <x-jet-input wire:model.defer='sigla' type="text" class=" w-full"
+                    placeholder='Escriba la sigla' />
+            </div>
+
+
+            <div class="mb-4">
+                <x-jet-label value="Nombre del Docente" />
+                <x-jet-input type="text" class="w-full" wire:model.defer="docente"
+                    placeholder='Escriba el nombre del docente' />
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Semestre de la Materia" />
+                <x-jet-input type="number" type="number" min="1" max="9" class="w-full"
+                    wire:model.defer="semestre" placeholder='Escriba el semestre de la materia' />
+            </div>
+
+        </x-slot>
+
+        <x-slot name="footer">
+            <x-jet-secondary-button wire:click="$set('open', false)" wire:loading.attr="disabled">
+                Cancelar
+            </x-jet-secondary-button>
+            <x-jet-danger-button wire:click="" wire:loading.attr="disabled" class="disabled:opacity-25">
+                Crear Materia
+            </x-jet-danger-button>
+        </x-slot>
+    </x-jet-dialog-modal>
+
+
+
+
 </div>
