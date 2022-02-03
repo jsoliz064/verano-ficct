@@ -19,7 +19,7 @@ use App\Http\Controllers\MateriaController;
 
 Route::get('/', function () {
     return view('prueba');
-});
+})->name('inicio');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('prueba');
@@ -33,4 +33,4 @@ Route::get('materias', function () {
     return view('materia.index');
 })->name('materias.index');
 
-Route::get('materias-estudiantes/{materia_id}',[MateriaController::class,'show2'])->name('materia.estudiantes.show');
+Route::get('materias-estudiantes/{materia_id}', [MateriaController::class, 'show2'])->name('materia.estudiantes.show');

@@ -1,71 +1,76 @@
-<div class="card my-5">
+<div class="my-5">
     <x-table>
 
-        <div class="card my-5">
+        <div class="card my-5 pt-8">
             <form action="">
-                <div align="center" class="p-6">
+                <div align="center" class="py-8 font-bold text-xl underline">
                     <h1> LISTA DE MATERIAS</h1>
                 </div>
             </form>
         </div>
 
-        <div class="px-4 py-6 flex items-center">
+        <div class="px-4 py-2 flex items-center">
             {{-- @endauth --}}
 
+            @if ($modal)
+                @include('livewire.crearmateria')
+            @endif
             <div class="flex items-center">
                 <span class="mr-2 font-bold ">Paginar</span>
                 <select wire:model='cant'
-                    class="mr-4 px-12 py-6 border-gray-300 text-left text-2xl rounded-2xl font-medium text-black-600 uppercase tracking-wider ">
+                    class="mr-2 px-8 py-2 border-gray-300 text-left text-md rounded-2xl font-medium text-black-600 uppercase tracking-wider ">
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="20">20</option>
                     <option value="50">50</option>
                 </select>
-                <span class="mr-2 font-bold">Buscar</span>
+                <span class="ml-4 mr-2 font-bold">Buscar</span>
             </div>
-            <x-jet-input type="text" class="flex-1 mr-5 rounded-full w-full p-3 text-2xl"
+            <x-jet-input type="text" class="flex-1 mr-3 rounded-full w-full py-2 px-4 text-md"
                 placeholder="Escriba el nombre de la materia" wire:model="search" />
-            <button wire:click="crear()" class="btn btn-primary mr-2">Registrar Materia</button>
+            <a class="font-bold text-white text-md bg-red-500 rounded cursor-pointer hover:bg-red-600 py-2 px-4 "
+                wire:click="crear()" /> Registrar
+            </a>
         </div>
-        <div class="card-body table-responsive">
+        <div class=" card card-body">
             {{-- @auth() --}}
- 
+
             @if ($modal)
                 @include('livewire.crearmateria')
             @endif
             @if (count($materiasa))
-                <table class=" table table-fixed divide-y divide-gray-200 shadow-lg mt-4 table-striped w-full border-5">
-                    <thead class="rounded-3xl text-white border-5" style="background-color: #D15238">
+                <table class=" table table-striped min-w-full divide-y divide-gray-200 text-md shadow-lg mt-4 border-5">
+                    <thead class="rounded-3xl px-8 text-white" style="background-color: #D15238">
                         <tr>
                             <th scope="col"
-                                class="cursor-pointer px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-xl">
+                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
                                 Id
                             </th>
                             <th scope="col"
-                                class="cursor-pointer px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-xl">
+                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
                                 Materia</th>
                             <th scope="col"
-                                class="cursor-pointer px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-xl">
+                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
                                 Docente</th>
                             <th scope="col"
-                                class="cursor-pointer px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-xl">
+                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
                                 Inscritos</th>
                             <th width="20%" scope="col"
-                                class="cursor-pointer px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-xl">
-                                Acciones y Grupos </th>
+                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
+                                Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($materiasa as $materia)
-                            <tr class="mx-4 my-4 bg-gray-200">
-                                <td class="px-6 py-4">
+                            <tr class="mx-4 my-4 divide-y divide-gray-200 bg-white">
+                                <td class="px-4 py-2">
                                     <span
-                                        class="px-4 py-2 inline-flex text-2xl leading-10 font-semibold rounded-full
+                                        class="px-2 py-1 inline-flex text-xl leading-10 font-semibold rounded-full
                                 bg-red-100 text-red-800">{{ $materia->id }}
                                     </span>
                                 </td>
-                                <td class="px-6 py-4">
-                                    <div class="text-xl font-bold text-gray-900">
+                                <td class="px-8 py-4">
+                                    <div class="text-md font-bold text-gray-900">
                                         {{ $materia->sigla }}
                                     </div>
                                     <div class="text-md text-gray-500">
@@ -73,9 +78,9 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="my-4">Vacío</div>
+                                    <div class="my-4 px-8">Vacío</div>
                                 </td>
-                                <td class="px-8 py-6 text-xl text-gray-500 font-bold">
+                                <td class="px-8 py-6 text-md text-gray-500 font-bold">
                                     @if ($materia->inscritos == null)
                                         <span class="px-2 my-4 rounded-full inline-flex text-white bg-gray-500">
                                             Sin inscritos
@@ -84,25 +89,32 @@
                                         {{ $materia->inscritos }}
                                     @endif
                                 </td>
-                                <td>
-                                    <form class="my-4">
-                                        <a class="btn btn-dark btn-md" href=""
-                                            style="background-color:#050505;color:#ffff">
-                                            <i class="fas fa-edit"></i>
+                                <td class="my-3 inline-flex justify-center px-6 py-4 whitespace-nowrap flex">
+                                    <div class="whitespace-nowrap flex">
+                                        <a class="ml-2 font-bold text-white rounded cursor-pointer bg-indigo-600 hover:bg-indigo-500 py-2 px-4"
+                                            href="{{ route('materia.estudiantes.show', $materia->id) }}">
+                                            <i class="fas fa-users"></i>
                                         </a>
-                                        <a class="btn btn-dark btn-md" href=""
-                                            style="background-color:#22c55e;color:#ffff">
+                                    </div>
+                                    <div class="whitespace-nowrap flex">
+                                        <a
+                                            class="ml-2 font-bold text-white rounded cursor-pointer bg-gray-600 hover:bg-gray-700 py-2 px-4">
+                                            <i class=" fas fa-edit"></i>
+                                        </a>
+                                    </div>
+                                    <div class="whitespace-nowrap flex">
+                                        <a
+                                            class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
                                             <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                         </a>
-                                        <a class="btn btn-dark btn-md" href=""
-                                            style="background-color:#0284c7;color:#ffff">
-                                            <i class="fa fa-telegram" aria-hidden="true"></i>
-                                        </a>
-                                        <button class="btn btn-danger btn-md"
+                                    </div>
+                                    <div class="whitespace-nowrap flex">
+                                        <a class="ml-2 font-bold text-white rounded cursor-pointer bg-red-600 hover:bg-red-500 py-2 px-4"
                                             onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">
-                                            <i class="fas fa-trash-alt">
-                                            </i></button>
-                                    </form>
+                                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+
                                 </td>
                             </tr>
                         @endforeach
