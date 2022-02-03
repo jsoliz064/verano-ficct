@@ -1,6 +1,14 @@
-consoleText(['Verano 3/2021', 'Support', 'C.I.Sistemas', 'C.I.Infromatica', 'C.I-Redes y Telecomunicaciones', 'Aprende +'], 'text', ['#fffff', 'rebeccapurple', 'lightblue']);
+consoleText(['Verano 3/2021', 'Support', 'C.I.Sistemas', 'C.I.Infromatica', 'C.I-Redes y Telecomunicaciones', 'Aprende +'], 'text', ['#ef0b0d', '#efe00e', '#ec9106', '#eff00f', '#ffffff', '#004f91']);
+//#ef0b0d
+//#efe00e
+//#ec9106
+//#eff00f
 
-
+//#003970
+//#004f91
+//#ff9401
+//#ffffff
+//#090907
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
@@ -49,33 +57,4 @@ function consoleText(words, id, colors) {
             visible = true;
         }
     }, 800)
-}
-
-
-function mostrarError(msj) {
-    $("#mensaje").text(msj);
-    $("#tipo").addClass("fa-times").removeClass("fa-check");
-    $(".mostrar-mensaje").removeClass("correcto").addClass("error show");
-}
-
-
-window.alert = function(titulo, descricao) {
-    // do something here
-    $('.alerta').find('.titulo4').html(titulo);
-    $('.alerta').find('.descricao').html(descricao);
-    $('.alerta').stop(true, true).fadeIn(50000);
-};
-
-$('.fechar').on('click', function() {
-    $('.alerta').stop(true, true).fadeOut(50000);
-});
-
-window.setTimeout(function() {
-    //console.log('Inscripción Exitosa');
-    alert('Inscripción Exitosa', ':)');
-}, 200);
-
-
-function alerta() {
-    alert("Inscripción Exitosa");
 }
