@@ -1,10 +1,10 @@
 @extends('plantilla.app')
 
-@section('title','Materias')
+@section('title', 'Materias')
 
 @section('content')
 
-    @livewire('materias')
+    @livewire('show-materia')
 @stop
 
 @section('css')

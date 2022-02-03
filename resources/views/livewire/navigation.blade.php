@@ -28,7 +28,7 @@
   background-size: cover;
   background-blend-mode: multiply;
 ">
-                                    <div class="md:w-4 w-full inline-flex ">
+                                    <div class="md:w-12 w-full inline-flex ">
                                         <img class=" w-12 h-12 rounded-lg shadow-lg antialiased"
                                             src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
 
