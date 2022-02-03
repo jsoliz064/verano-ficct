@@ -15,7 +15,8 @@
                     <li><a href="{{ route('materias.index') }}" class="text-menu-selected"><i
                                 class="fas fa-book"></i>Ver Inscritos</a></li>
                     <li><a href="#" class="text-menu-selected"><i class="fas fa-address-book"></i>Contactanos</a></li>
-
+                    <li><a href="{{route('login')}}" class="text-menu-selected"><i class="fas fa-user"></i>Login</a></li>
+                    @auth()
                     <li>
 
                         <div class="w-60 h-20 flex flex-row flex-wrap p-3 ml-1">
@@ -34,10 +35,11 @@
 
                                         <div class="md:w-4 w-full px-3 flex flex-row flex-wrap">
                                             <div class=" text-right text-gray-700 font-semibold relative pt-3 md:pt-0">
-                                                <div class="text-sm text-white leading-tight">Admin User</div>
+                                                <div class="text-sm text-white leading-tight">{{auth()->user()->name}}</div>
                                                 <div class="text-sm text-gray-900 hover:text-gray-400 cursor-pointer">
-                                                    <span
-                                                        class="border-b border-dashed border-gray-500 pb-1">Administrator</span>
+                                                    <a href="{{route('user.logout')}}" >
+                                                        <div class="text-sm text-white leading-tight">Salir</div>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -46,6 +48,7 @@
                                 </div>
                             </div>
                     </li>
+                    @endauth
                 </ul>
             </nav>
         </div>
