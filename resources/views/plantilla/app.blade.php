@@ -35,6 +35,8 @@
 </head>
 
 <body>
+    <div id="move-content">
+    </div>
     @livewire('navigation')
     @yield('content')
 

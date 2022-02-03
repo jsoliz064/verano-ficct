@@ -45,12 +45,7 @@
                                     <!-- End Profile Card -->
                                 </div>
                             </div>
-
                     </li>
-
-
-
-
                 </ul>
             </nav>
         </div>
@@ -65,4 +60,6 @@
     <div class="container-cover">
     </div>
 </div>-->
+
+
 <script src="{{ asset('js/menu.js') }}"></script>
