@@ -15,10 +15,10 @@ class CreateEstudianteMateriaTable extends Migration
     {
         Schema::create('estudiante_materia', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('materia_id')->nullable();
-            $table->foreign('materia_id')->references('id')->on('materias')->onDelete('set null')->onUpdate('cascade');
-            $table->unsignedBigInteger('estudiante_id')->nullable();
-            $table->foreign('estudiante_id')->references('id')->on('estudiantes')->onDelete('set null')->onUpdate('cascade');
+            $table->unsignedBigInteger('materia_id');
+            $table->foreign('materia_id')->references('id')->on('materias')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('estudiante_id');
+            $table->foreign('estudiante_id')->references('id')->on('estudiantes')->onDelete('cascade')->onUpdate('cascade');
            
             $table->timestamps();
         });

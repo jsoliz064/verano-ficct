@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CarreraMateria extends Model
 {
     use HasFactory;
-    protected $table="carrera_materias";
+    protected $table="carrera_materia";
     protected $guarded=['id','created_at','updated_at'];
 
     /* //relacion uno a muchos inversa

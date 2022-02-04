@@ -15,10 +15,10 @@ class CreateCarreraMateriaTable extends Migration
     {
         Schema::create('carrera_materia', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('carrera_id')->nullable();
-            $table->foreign('carrera_id')->references('id')->on('carreras')->onDelete('set null')->onUpdate('cascade');
-            $table->unsignedBigInteger('materia_id')->nullable();
-            $table->foreign('materia_id')->references('id')->on('materias')->onDelete('set null')->onUpdate('cascade');
+            $table->unsignedBigInteger('carrera_id');
+            $table->foreign('carrera_id')->references('id')->on('carreras')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('materia_id');
+            $table->foreign('materia_id')->references('id')->on('materias')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
