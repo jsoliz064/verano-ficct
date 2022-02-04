@@ -1,8 +1,6 @@
-<!--<div id="move-content">-->
+<div class="page2">
 <div class="background"></div>
 <div class="backdrop"></div>
-
-<div class="page2">
     <div class="formulario2">
         <!-- HEADER -->
         <div class="header2">
@@ -42,6 +40,7 @@
                     <span class="input-group-addon" style="background-color:#0000;color:#ffff">
                         <i class="glyphicon glyphicon-user"></i>
                     </span>
+                    
                     <input id="nombre" wire:model="nombre" name="nombre" placeholder="Nombre Completo"
                         class="form-control2" size="10" min="10" maxlength="40" max="40" type="text" required>
                 </div>

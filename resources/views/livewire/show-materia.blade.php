@@ -24,6 +24,7 @@
             </div>
             <x-jet-input type="text" class="flex-1 mr-3 rounded-full w-full py-2 px-4 text-md"
                 placeholder="Escriba el nombre de la materia" wire:model="search" />
+
             <x-jet-danger-button
                 class="font-bold text-white text-md bg-red-500 rounded cursor-pointer hover:bg-red-600 py-2 px-4 "
                 wire:click="$set('open', true)"> Registrar
