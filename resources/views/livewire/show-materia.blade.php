@@ -83,7 +83,7 @@
                                         {{ $materia->inscritos }}
                                     @endif
                                 </td>
-                                <td class="my-3 inline-flex justify-center px-6 py-4 whitespace-nowrap flex">
+                                <td class=" m-3 inline-flex justify-center px-6 py-4 whitespace-nowrap flex">
                                     <div class="whitespace-nowrap flex">
                                         <a class="ml-2 font-bold text-white rounded cursor-pointer bg-indigo-600 hover:bg-indigo-500 py-2 px-4"
                                             href="{{ route('materia.estudiantes.show', $materia->id) }}">

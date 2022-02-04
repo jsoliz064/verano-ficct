@@ -17,14 +17,16 @@
                             <i class="fas fa-book"></i>Ver
                             Inscritos</a>
                     </li>
-                    <li><a href="#" class="text-menu-selected text-inline"><i
-                                class="fas fa-address-book"></i>Contactanos</a></li>
+                    <li @if (Request::url() == route('contact-us'))  class="menu-selected" @endif>
+                        <a @if (Request::url() != route('contact-us'))  href="{{ route('contact-us') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
+                            <i class="fas fa-address-book"></i>Contáctanos</a>
+                    </li>
                     <li><a href="{{ route('login') }}" class="text-menu-selected text-inline"><i
                                 class="fas fa-user"></i>Login</a></li>
                     @auth()
                         <li>
 
-                            <div class="w-48 h-12 flex flex-row md:mt-5 flex-wrap px-2 py-2 mx-4">
+                            <div class="w-48 h-12 flex flex-row flex-wrap px-2 py-2 mx-4">
                                 <div class="mx-auto w-3">
                                     <!-- Profile Card -->
                                     <div class=" w-48 h-12  rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3 antialiased"

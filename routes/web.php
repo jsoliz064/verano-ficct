@@ -38,4 +38,9 @@ Route::get('materias', function () {
     return view('materia.index');
 })->name('materias.index');
 
-Route::get('materias-estudiantes/{materia_id}',[MateriaController::class,'show2'])->name('materia.estudiantes.show');
+Route::get('materias-estudiantes/{materia_id}', [MateriaController::class, 'show2'])->name('materia.estudiantes.show');
+
+// Contact Us Route
+Route::middleware(['auth:sanctum', 'verified'])->get('/contact-us', function () {
+    return view('contact');
+})->name('contact-us');
