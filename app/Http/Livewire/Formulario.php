@@ -6,7 +6,6 @@ use Livewire\Component;
 use App\Models\Estudiante;
 use App\Models\Carrera;
 use App\Models\Materia;
-use Illuminate\Support\Facades\DB;
 
 
 class Formulario extends Component
