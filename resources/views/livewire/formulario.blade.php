@@ -145,10 +145,12 @@
 
 <!-------------->
 @push('js')
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+
     <script>
-        Livewire.on('guardar', inscriptionMessage => {
+        Livewire.on("alert", alert => {
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -158,6 +160,26 @@
             })
         })
     </script>
+    <script>
+        Livewire.on("alert2", function(message) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 2500,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                },
+            });
+            Toast.fire({
+                icon: "error",
+                title: message,
+            });
+        });
+    </script>
+
 @endpush
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 

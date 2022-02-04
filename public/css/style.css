@@ -63,6 +63,10 @@
 
 /*contenedor del formulario*/
 
+.swal2-popup {
+    font-size: 2rem !important;
+}
+
 .container2 {
     width: 100%;
     z-index: 1;
