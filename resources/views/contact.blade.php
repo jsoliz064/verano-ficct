@@ -22,7 +22,7 @@
 
             <div class="card_1">
                 <x-table>
-                    <div class="card card-title mt-8 p-6 bg-gray-500 text-white">
+                    <div class="card card-title mt-8 p-6 bg-gray-800 text-white">
                         <h1 class="font-bold text-3xl underline text-center py-12">Contáctanos</h1>
                     </div>
 

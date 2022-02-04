@@ -1,7 +1,7 @@
 <div class="my-5">
     <x-table>
 
-        <div class="card my-5 pt-8">
+        <div class=" my-5 pt-8">
             <form action="">
                 <div align="center" class="py-8 font-bold text-xl underline">
                     <h1> LISTA DE MATERIAS</h1>
@@ -30,114 +30,116 @@
                 wire:click="$set('open', true)"> Registrar
             </x-jet-danger-button>
         </div>
-        <div class="card card-body">
-            {{-- @auth() --}}
+        {{-- @auth() --}}
 
-            @if (count($materiasa))
-                <table class=" table table-striped min-w-full divide-y divide-gray-200 text-md shadow-lg mt-4 border-5">
-                    <thead class="rounded-3xl px-8 text-white" style="background-color: #D15238">
-                        <tr>
-                            <th scope="col"
-                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
-                                Id
-                            </th>
-                            <th scope="col"
-                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
-                                Materia</th>
-                            <th scope="col"
-                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
-                                Docente</th>
-                            <th scope="col"
-                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
-                                Inscritos</th>
-                            <th width="20%" scope="col"
-                                class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
-                                Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($materiasa as $materia)
-                            <tr class="mx-4 my-4 divide-y divide-gray-200 bg-white">
-                                <td class="px-4 py-2">
-                                    <span
-                                        class="px-2 py-1 inline-flex text-xl leading-10 font-semibold rounded-full
+        @if (count($materiasa))
+            <table class=" table table-striped min-w-full divide-y divide-gray-200 text-md shadow-lg mt-4 border-5">
+                <thead class="rounded-3xl px-8 text-white" style="background-color: #D15238">
+                    <tr>
+                        <th scope="col"
+                            class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
+                            Id
+                        </th>
+                        <th scope="col"
+                            class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
+                            Materia</th>
+                        <th scope="col"
+                            class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
+                            Docente</th>
+                        <th scope="col"
+                            class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
+                            Inscritos</th>
+                        <th width="20%" scope="col"
+                            class="cursor-pointer px-8 py-2 text-left text-sm font-bold uppercase tracking-wider">
+                            Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($materiasa as $materia)
+                        <tr class="mx-4 my-4 divide-y divide-gray-200 bg-white">
+                            <td class="px-4 py-2">
+                                <span
+                                    class="px-2 py-1 inline-flex text-xl leading-10 font-semibold rounded-full
                                 bg-red-100 text-red-800">{{ $materia->id }}
-                                    </span>
-                                </td>
-                                <td class="px-8 py-4">
-                                    <div class="text-md font-bold text-gray-900">
-                                        {{ $materia->sigla }}
-                                    </div>
-                                    <div class="text-md text-gray-500">
-                                        {{ $materia->nombre }}
-                                    </div>
-                                </td>
-                                <td>
-                                    @if ($materia->docente!=null)
-                                        <div class="my-4 px-8">{{$materia->docente}}</div>
-                                    @else
-                                        <div class="my-4 px-8">Vacío</div>
+                                </span>
+                            </td>
+                            <td class="px-8 py-4">
+                                <div class="text-md font-bold text-gray-900">
+                                    {{ $materia->sigla }}
+                                </div>
+                                <div class="text-md text-gray-500">
+                                    {{ $materia->nombre }}
+                                </div>
+                            </td>
+                            <td>
+                                @if ($materia->docente != null)
+                                    <div class="my-4 px-8">{{ $materia->docente }}</div>
+                                @else
+                                    <div class="my-4 px-8">Vacío</div>
 
-                                    @endif
-                                </td>
-                                <td class="px-8 py-6 text-md text-gray-500 font-bold">
-                                    @if ($materia->inscritos == null)
-                                        <span class="px-2 my-4 rounded-full inline-flex text-white bg-gray-500">
-                                            Sin inscritos
-                                        </span>
-                                    @else
-                                        {{ $materia->inscritos }}
-                                    @endif
-                                </td>
-                                <td class=" m-3 inline-flex justify-center px-6 py-4 whitespace-nowrap flex">
-                                    @can('admin')
-                                        <div class="whitespace-nowrap flex">
-                                            <a class="ml-2 font-bold text-white rounded cursor-pointer bg-indigo-600 hover:bg-indigo-500 py-2 px-4"
-                                                href="{{ route('materia.estudiantes.show', $materia->id) }}">
-                                                <i class="fas fa-users"></i>
-                                            </a>
-                                        </div>
-                                        <div class="whitespace-nowrap flex">
-                                            <a wire:click="edit({{$materia->id}})"
-                                                class="ml-2 font-bold text-white rounded cursor-pointer bg-gray-600 hover:bg-gray-700 py-2 px-4">
-                                                <i class=" fas fa-edit"></i>
-                                            </a>
-                                        </div>
-                                    @endcan
+                                @endif
+                            </td>
+                            <td class="px-8 py-6 text-md text-gray-500 font-bold">
+                                @if ($materia->inscritos == null)
+                                    <span class="px-2 my-4 rounded-full inline-flex text-white bg-gray-500">
+                                        Sin inscritos
+                                    </span>
+                                @else
+                                    {{ $materia->inscritos }}
+                                @endif
+                            </td>
+                            <td class=" inline-flex justify-center px-6 py-4 whitespace-nowrap flex">
+                                @can('admin')
                                     <div class="whitespace-nowrap flex">
-                                        <a  href="{{$materia->grupo}}"
-                                            class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
-                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                        <a class="ml-2 font-bold text-white rounded cursor-pointer bg-indigo-600 hover:bg-indigo-500 py-2 px-4"
+                                            href="{{ route('materia.estudiantes.show', $materia->id) }}">
+                                            <i class="fas fa-users"></i>
                                         </a>
                                     </div>
-                                    @can('admin')
-                                        <div class="whitespace-nowrap flex">
-                                            <a  wire:click.prevent="eliminar({{$materia->id}})" class="ml-2 font-bold text-white rounded cursor-pointer bg-red-600 hover:bg-red-500 py-2 px-4"
-                                                onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">
-                                                <i class="fas fa-trash-alt" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    @endcan
+                                    <div class="whitespace-nowrap flex">
+                                        <a wire:click="edit({{ $materia->id }})"
+                                            class="ml-2 font-bold text-white rounded cursor-pointer bg-gray-600 hover:bg-gray-700 py-2 px-4">
+                                            <i class=" fas fa-edit"></i>
+                                        </a>
+                                    </div>
+                                @endcan
+                                <div class=" m-3 whitespace-nowrap flex">
+                                    <a href="{{ $materia->grupo }}"
+                                        class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
+                                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                @can('admin')
+                                    <div class="whitespace-nowrap flex">
+                                        <a wire:click.prevent="eliminar({{ $materia->id }})"
+                                            class="ml-2 font-bold text-white rounded cursor-pointer bg-red-600 hover:bg-red-500 py-2 px-4"
+                                            onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">
+                                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                @endcan
 
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @if ($materiasa->hasPages())
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            @if ($materiasa->hasPages())
+                <x-table>
                     <div class="px-6 py-3">
                         {{ $materiasa->links() }}
                     </div>
-                @endif
+                </x-table>
 
-            @else
-                <div class="px-6 py-4">
-                    No hay materias con ese nombre
-                </div>
             @endif
 
-        </div>
+        @else
+            <div class="px-6 py-4">
+                No hay materias con ese nombre
+            </div>
+        @endif
     </x-table>
+
 
     <x-jet-dialog-modal wire:model="open">
 
@@ -148,12 +150,12 @@
         <x-slot name="content">
             <div class="mb-4">
                 <x-jet-label value="Sigla de la Materia:" />
-                <x-jet-input wire:model='sigla' type="text" class=" w-full"/>
+                <x-jet-input wire:model='sigla' type="text" class=" w-full" />
             </div>
 
             <div class="mb-4">
                 <x-jet-label value="Nombre de la Materia:" />
-                <x-jet-input type="text" class="w-full" wire:model="nombre"/>
+                <x-jet-input type="text" class="w-full" wire:model="nombre" />
             </div>
 
             <div class="mb-4">
@@ -163,36 +165,41 @@
 
             <div class="mb-4">
                 <x-jet-label value="Carrera:" />
-                    <div class="flex justify-center">
-                        <div>
-                                <div class="form-check">
-                                    <input wire:model="c1" name="carrera1" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera1->id}}" id="flexCheckDefault">
-                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
-                                        {{$carrera1->nombre}}
-                                    </label>
-                                </div>
+                <div class="flex justify-center">
+                    <div>
+                        <div class="form-check">
+                            <input wire:model="c1" name="carrera1"
+                                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                type="checkbox" value="{{ $carrera1->id }}" id="flexCheckDefault">
+                            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                {{ $carrera1->nombre }}
+                            </label>
+                        </div>
 
-                                <div class="form-check">
-                                    <input wire:model="c2" name="carrera2" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera2->id}}" id="flexCheckDefault">
-                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
-                                        {{$carrera2->nombre}}
-                                    </label>
-                                </div>
+                        <div class="form-check">
+                            <input wire:model="c2" name="carrera2"
+                                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                type="checkbox" value="{{ $carrera2->id }}" id="flexCheckDefault">
+                            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                {{ $carrera2->nombre }}
+                            </label>
+                        </div>
 
-                                <div class="form-check">
-                                    <input wire:model="c3" name="carrera3" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera3->id}}" id="flexCheckDefault">
-                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
-                                        {{$carrera3->nombre}}
-                                    </label>
-                                </div>
+                        <div class="form-check">
+                            <input wire:model="c3" name="carrera3"
+                                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                type="checkbox" value="{{ $carrera3->id }}" id="flexCheckDefault">
+                            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                {{ $carrera3->nombre }}
+                            </label>
                         </div>
                     </div>
+                </div>
             </div>
 
             <div class="mb-4">
                 <x-jet-label value="Grupo de WhatsApp:" />
-                <x-jet-input type="text" class="w-full" wire:model="grupo"
-                    placeholder='enlace del grupo' />
+                <x-jet-input type="text" class="w-full" wire:model="grupo" placeholder='enlace del grupo' />
             </div>
 
         </x-slot>
@@ -207,7 +214,7 @@
         </x-slot>
     </x-jet-dialog-modal>
 
-{{--  MODAL EDITAR MATERIA  --}}
+    {{-- MODAL EDITAR MATERIA --}}
     <x-jet-dialog-modal wire:model="open2">
 
         <x-slot name="title">
@@ -217,51 +224,56 @@
         <x-slot name="content">
             <div class="mb-4">
                 <x-jet-label value="Sigla de la Materia:" />
-                <x-jet-input wire:model='sigla' type="text" class=" w-full"/>
+                <x-jet-input wire:model='sigla' type="text" class=" w-full" />
             </div>
 
             <div class="mb-4">
                 <x-jet-label value="Nombre de la Materia:" />
-                <x-jet-input type="text" class="w-full" wire:model="nombre"/>
+                <x-jet-input type="text" class="w-full" wire:model="nombre" />
             </div>
 
             <div class="mb-4">
                 <x-jet-label value="Nombre del Docente:" />
-                <x-jet-input type="text" class="w-full" wire:model="docente"/>
+                <x-jet-input type="text" class="w-full" wire:model="docente" />
             </div>
 
             <div class="mb-4">
                 <x-jet-label value="Carrera:" />
-                    <div class="flex justify-center">
-                        <div>
-                                <div class="form-check">
-                                    <input wire:model="c1" name="carrera1" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera1->id}}" id="flexCheckDefault">
-                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
-                                        {{$carrera1->nombre}}
-                                    </label>
-                                </div>
+                <div class="flex justify-center">
+                    <div>
+                        <div class="form-check">
+                            <input wire:model="c1" name="carrera1"
+                                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                type="checkbox" value="{{ $carrera1->id }}" id="flexCheckDefault">
+                            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                {{ $carrera1->nombre }}
+                            </label>
+                        </div>
 
-                                <div class="form-check">
-                                    <input wire:model="c2" name="carrera2" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera2->id}}" id="flexCheckDefault">
-                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
-                                        {{$carrera2->nombre}}
-                                    </label>
-                                </div>
+                        <div class="form-check">
+                            <input wire:model="c2" name="carrera2"
+                                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                type="checkbox" value="{{ $carrera2->id }}" id="flexCheckDefault">
+                            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                {{ $carrera2->nombre }}
+                            </label>
+                        </div>
 
-                                <div class="form-check">
-                                    <input wire:model="c3" name="carrera3" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera3->id}}" id="flexCheckDefault">
-                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
-                                        {{$carrera3->nombre}}
-                                    </label>
-                                </div>
+                        <div class="form-check">
+                            <input wire:model="c3" name="carrera3"
+                                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                type="checkbox" value="{{ $carrera3->id }}" id="flexCheckDefault">
+                            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                {{ $carrera3->nombre }}
+                            </label>
                         </div>
                     </div>
+                </div>
             </div>
 
             <div class="mb-4">
                 <x-jet-label value="Grupo de WhatsApp:" />
-                <x-jet-input type="text" class="w-full" wire:model="grupo"
-                    placeholder='enlace del grupo'/>
+                <x-jet-input type="text" class="w-full" wire:model="grupo" placeholder='enlace del grupo' />
             </div>
 
         </x-slot>
