@@ -29,129 +29,129 @@
                 </x-table>
             </div>
 
-            <div class=" ">
+            <div class="cont">
 
 
                 <div class="card_2">
-                    <x-table>
-                        <div class=" card card-body">
 
-                            <div class="h-full md:w-full pt-8 ">
-                                <div
-                                    class="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
-                                    <h2 class="text-3xl mb-3">Desarrollador Frontend</h2>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Edad:</b> 21 años
-                                    </p>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
-                                    </p>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Semestre:</b> Séptimo
-                                    </p>
+                    <div class=" card card-body">
 
+                        <div class="h-full md:w-full pt-8 ">
+                            <div
+                                class="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
+                                <h2 class="text-3xl mb-3">Desarrollador Frontend</h2>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Edad:</b> 21 años
+                                </p>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
+                                </p>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Semestre:</b> Séptimo
+                                </p>
+
+                            </div>
+                            <div
+                                class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
+                                <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
+                                <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
+                                    src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t1.6435-9/70506864_1388239178008145_5153636253240918016_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=tloaQBJLpUEAX9a5fo3&_nc_oc=AQn5VtJRggTuya2FfiAn2P_GKxkqfICNNynxDEEhE7mwy-TCtaV4xhYFGRFV0HfG6ttpLiYY_VQS_VC9PKlMKceu&_nc_ht=scontent.fvvi1-1.fna&oh=00_AT-Jv8k8yYJGvlwT3PBuZ9vuCTPjNxWxXgYQaTRuIj5KDw&oe=62228111"
+                                    alt="User avatar">
+                                <p class="capitalize text-xl mt-1">Diego Hurtado Vargas</p>
+                                <span
+                                    class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
+                                    <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Activo
+                                </span>
+                                <div style="white-space: nowrap">
+                                    <button
+                                        class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
+                                        Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
                                 </div>
-                                <div
-                                    class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
-                                    <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
-                                    <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
-                                        src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t1.6435-9/70506864_1388239178008145_5153636253240918016_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=tloaQBJLpUEAX9a5fo3&_nc_oc=AQn5VtJRggTuya2FfiAn2P_GKxkqfICNNynxDEEhE7mwy-TCtaV4xhYFGRFV0HfG6ttpLiYY_VQS_VC9PKlMKceu&_nc_ht=scontent.fvvi1-1.fna&oh=00_AT-Jv8k8yYJGvlwT3PBuZ9vuCTPjNxWxXgYQaTRuIj5KDw&oe=62228111"
-                                        alt="User avatar">
-                                    <p class="capitalize text-xl mt-1">Diego Hurtado Vargas</p>
-                                    <span
-                                        class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
-                                        <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Active
-                                    </span>
-                                    <div style="white-space: nowrap">
-                                        <button
-                                            class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
-                                            Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-                                    </div>
 
-                                </div>
                             </div>
                         </div>
-                    </x-table>
+                    </div>
+
                 </div>
 
                 <div class="card_3">
-                    <x-table>
-                        <div class="card card-body">
 
-                            <div class="mx-5 h-full grid place-content-center">
-                                <div
-                                    class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
-                                    <h2 class="text-3xl mb-3">Desarrollador Backend</h2>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Edad:</b> 22 años
-                                    </p>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
-                                    </p>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Semestre:</b> Octavo
-                                    </p>
+                    <div class="card card-body">
 
-                                </div>
-                                <div
-                                    class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
-                                    <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
-                                    <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
-                                        src="{{ asset('imagenes/daniel2.png') }}" alt="User avatar">
-                                    <p class="capitalize text-xl mt-1">José Daniel Soliz</p>
-                                    <span
-                                        class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
-                                        <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Active
-                                    </span>
-                                    <div style="white-space: nowrap">
-                                        <button
-                                            class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
-                                            Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-                                    </div>
+                        <div class="mx-5 h-full grid place-content-center">
+                            <div
+                                class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
+                                <h2 class="text-3xl mb-3">Desarrollador Backend</h2>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Edad:</b> 22 años
+                                </p>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
+                                </p>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Semestre:</b> Octavo
+                                </p>
+
+                            </div>
+                            <div
+                                class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
+                                <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
+                                <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
+                                    src="{{ asset('imagenes/daniel2.png') }}" alt="User avatar">
+                                <p class="capitalize text-xl mt-1">José Daniel Soliz</p>
+                                <span
+                                    class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
+                                    <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Activo
+                                </span>
+                                <div style="white-space: nowrap">
+                                    <button
+                                        class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
+                                        Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </div>
-                    </x-table>
+                    </div>
+
                 </div>
 
                 <div class="card_4">
-                    <x-table>
-                        <div class="card card-body">
 
-                            <div class="mx-5 h-full grid place-content-center">
-                                <div
-                                    class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
-                                    <h2 class="text-3xl mb-3">Programador Frontend</h2>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Edad:</b> 21 años
-                                    </p>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
-                                    </p>
-                                    <p class="text-lg">
-                                        <b class="font-bold"> Semestre:</b> Sexto
-                                    </p>
+                    <div class="card card-body">
 
-                                </div>
-                                <div
-                                    class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
-                                    <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
-                                    <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg" src=""
-                                        alt="User avatar">
-                                    <p class="capitalize text-xl mt-1">Luisinho</p>
-                                    <span
-                                        class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
-                                        <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Active
-                                    </span>
-                                    <div style="white-space: nowrap">
-                                        <button
-                                            class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
-                                            Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-                                    </div>
+                        <div class="mx-5 h-full grid place-content-center">
+                            <div
+                                class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
+                                <h2 class="text-3xl mb-3">Desarrollador Frontend</h2>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Edad:</b> 21 años
+                                </p>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
+                                </p>
+                                <p class="text-lg">
+                                    <b class="font-bold"> Semestre:</b> Sexto
+                                </p>
+
+                            </div>
+                            <div
+                                class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
+                                <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
+                                <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg" src=""
+                                    alt="User avatar">
+                                <p class="capitalize text-xl mt-1">Luisinho</p>
+                                <span
+                                    class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
+                                    <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Activo
+                                </span>
+                                <div style="white-space: nowrap">
+                                    <button
+                                        class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
+                                        Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </div>
-                    </x-table>
+                    </div>
+
                 </div>
 
 
@@ -162,12 +162,13 @@
 
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/contact.js') }}"></script>
+    <script src="{{ asset('js/contact2.js') }}"></script>
 
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/contact.js') }}"></script>
-<script src="{{ asset('js/contact2.js') }}"></script>
+
 
 </html>
