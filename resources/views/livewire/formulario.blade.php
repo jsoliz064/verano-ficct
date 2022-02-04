@@ -130,8 +130,7 @@
 
                 <!-- Button -->
                 <div class="input-group">
-                    <button wire:click.prevent="guardar()" onClick="alerta()" type="button"
-                        class="btn-login">Inscribir
+                    <button wire:click="guardar()" type="button" class="btn-login">Inscribir
                     </button>
                     @if (session()->has('message'))
                         <h4>{{ session('message') }}</h4>
@@ -145,8 +144,21 @@
 
 
 <!-------------->
+@push('js')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
+    <script>
+        Livewire.on('guardar', inscriptionMessage => {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '¡Has inscrito tus materias exitosamente!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        })
+    </script>
+@endpush
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 <script src="{{ asset('js/formulario.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>

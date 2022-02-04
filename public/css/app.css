@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.17 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -1009,10 +1009,6 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
-.-my-2 {
-  margin-top: -0.5rem;
-  margin-bottom: -0.5rem;
-}
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -1024,6 +1020,14 @@ select {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.-my-2 {
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
 }
 .mx-5 {
   margin-left: 1.25rem;
@@ -1098,14 +1102,11 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
-.mr-4 {
-  margin-right: 1rem;
-}
-.mr-5 {
-  margin-right: 1.25rem;
-}
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+.-mt-px {
+  margin-top: -1px;
 }
 .mr-16 {
   margin-right: 4rem;
@@ -1121,6 +1122,9 @@ select {
 }
 .mb-8 {
   margin-bottom: 2rem;
+}
+.mr-5 {
+  margin-right: 1.25rem;
 }
 .mb-0 {
   margin-bottom: 0px;
@@ -1173,8 +1177,14 @@ select {
 .h-20 {
   height: 5rem;
 }
+.h-screen {
+  height: 100vh;
+}
 .h-full {
   height: 100%;
+}
+.max-h-full {
+  max-height: 100%;
 }
 .max-h-10 {
   max-height: 2.5rem;
@@ -1248,6 +1258,9 @@ select {
 .max-w-xl {
   max-width: 36rem;
 }
+.max-w-6xl {
+  max-width: 72rem;
+}
 .max-w-xs {
   max-width: 20rem;
 }
@@ -1265,9 +1278,6 @@ select {
 }
 .shrink-0 {
   flex-shrink: 0;
-}
-.table-fixed {
-  table-layout: fixed;
 }
 .origin-top-left {
   transform-origin: top left;
@@ -1406,9 +1416,15 @@ select {
 .overflow-y-hidden {
   overflow-y: hidden;
 }
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.whitespace-nowrap {
   white-space: nowrap;
 }
 .rounded-md {
@@ -1466,14 +1482,11 @@ select {
 .border-b {
   border-bottom-width: 1px;
 }
-.border-b-4 {
-  border-bottom-width: 4px;
-}
 .border-r {
   border-right-width: 1px;
 }
-.border-dashed {
-  border-style: dashed;
+.border-b-4 {
+  border-bottom-width: 4px;
 }
 .border-gray-300 {
   --tw-border-opacity: 1;
@@ -1494,9 +1507,9 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
-.border-gray-500 {
+.border-gray-400 {
   --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 .border-indigo-500 {
   --tw-border-opacity: 1;
@@ -1509,10 +1522,6 @@ select {
 .border-red-500 {
   --tw-border-opacity: 1;
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 .border-green-600 {
   --tw-border-opacity: 1;
@@ -1566,6 +1575,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
 .bg-gray-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
@@ -1573,10 +1586,6 @@ select {
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 .bg-gray-700 {
   --tw-bg-opacity: 1;
@@ -1611,11 +1620,14 @@ select {
 .p-3 {
   padding: 0.75rem;
 }
-.p-0 {
-  padding: 0px;
+.p-1 {
+  padding: 0.25rem;
 }
 .p-5 {
   padding: 1.25rem;
+}
+.p-0 {
+  padding: 0px;
 }
 .p-4 {
   padding: 1rem;
@@ -1676,10 +1688,6 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1717,6 +1725,9 @@ select {
 }
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+.pt-8 {
+  padding-top: 2rem;
 }
 .pt-3 {
   padding-top: 0.75rem;
@@ -1881,6 +1892,14 @@ select {
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
 }
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2030,6 +2049,10 @@ select {
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+.hover\:bg-indigo-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
 .hover\:bg-green-600:hover {
   --tw-bg-opacity: 1;
@@ -2217,6 +2240,13 @@ select {
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
 }
+@media (prefers-color-scheme: dark) {
+
+  .dark\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  }
+}
 @media (min-width: 640px) {
 
   .sm\:col-span-4 {
@@ -2340,6 +2370,10 @@ select {
     align-items: center;
   }
 
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
   .sm\:justify-center {
     justify-content: center;
   }
@@ -2421,8 +2455,8 @@ select {
     display: grid;
   }
 
-  .md\:w-12 {
-    width: 3rem;
+  .md\:w-8 {
+    width: 2rem;
   }
 
   .md\:w-4 {
