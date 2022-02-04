@@ -79,17 +79,6 @@
     /* BACKGROUND 
     */
     
-    .page2 {
-        /* display: flex;
-        align-items: center;
-    justify-content: center;
-    */
-        min-height: 120vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
     .page-formulario {
         min-height: 140vh;
         display: flex;
@@ -160,16 +149,17 @@ background-color: #e05757;
     
     .title {
         text-transform: uppercase;
-        letter-spacing: 7px;
+        letter-spacing: 1px;
         font-family: "Fjalla One", sans-serif;
-        transform: translateX(-25%) rotate(-25deg);
+        font-family: cursive;
+        transform: translateX(-35%) rotate(-35deg);
         display: block;
-        left: 20%;
+        left: 100%;
         position: relative;
-        font-size: 20px;
-        top: auto;
+        font-size: 18px;
+        top: 0px;
         color: #ef940a;
-        font-style: italic;
+        font-weight: bold;
     }
     /* letra escribe automaticamente */
     
@@ -178,13 +168,23 @@ background-color: #e05757;
     }
     
     .console-container {
-        font-family: Khula;
+        font-family: 'Khula';
         font-size: 20px;
         display: block;
         top: 0;
         margin: auto;
         text-align: center;
         overflow: hidden;
+        font-weight: bold;
+    }
+    
+    .console-underscore {
+        display: inline-block;
+        position: relative;
+        color: rgb(10, 10, 10);
+        top: -0.14em;
+        font-weight: bold;
+        font-size: 20px;
     }
     /* letra escribe automaticamente */
     /* logo 

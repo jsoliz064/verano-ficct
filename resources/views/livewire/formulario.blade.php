@@ -5,24 +5,27 @@
         <!-- HEADER -->
         <div class="header2">
             <h1 class="h1">
-                <span class="title">Ficct</span>
-                <span class="title">Inscribete</span>
+                <span class="title">VERANO <br>3/2021 </span>
             </h1>
             <center>
                 <img class="imagen" src="{{ asset('imagenes/logo.png') }}" width="150">
-                <p class="texto.ficct"> Bienvenido al formulario Ficct ⚡⚡⚡<br>
-                    para todas las materias de la<br>
-                </p>
-
-
-
-                Hola, esperamos que los materiales
-                y recursos disponibles en el entorno virtual que desarrollaremos te ayuden en la asignatura. Completa el
-                siguiente formulario para saber qué guía necesitas📚
-                <div class='console-container'><span hidden>_</span><span id='text'></span>
-                    <div class='console-underscore' id='console'>|</div>
-                </div>
             </center>
+
+            <div class='console-container'><span style="color:transparent">_</span><span id='text'></span>
+                <div class='console-underscore' id='console'>|</div>
+            </div>
+            <p class="texto.ficct"> Bienvenido al formulario Ficct ⚡⚡⚡<br>
+                para todas las materias de la<br>
+            </p>
+
+
+
+            Hola, esperamos que los materiales
+            y recursos disponibles en el entorno virtual que desarrollaremos te ayuden en la asignatura. Completa el
+            siguiente formulario para saber qué guía necesitas📚
+
+
+
         </div>
         <div class="container-form">
             <form id="contact_form">

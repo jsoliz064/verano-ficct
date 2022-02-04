@@ -1,4 +1,4 @@
-consoleText(['Verano 3/2021', 'Support', 'C.I.Sistemas', 'C.I.Infromatica', 'C.I-Redes y Telecomunicaciones', 'Aprende +'], 'text', ['#ef0b0d', '#efe00e', '#ec9106', '#eff00f', '#ffffff', '#004f91']);
+consoleText(['FICCT', 'Support', 'C.I.Sistemas', 'C.I.Informatica', 'C.I.Redes y Telecomunicaciones', 'Aprende +'], 'text', ['#004a8b', '#eb070a', '#19aaeb', '#eb9109', '#435160', '#00000']);
 //#ef0b0d
 //#efe00e
 //#ec9106
