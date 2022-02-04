@@ -78,15 +78,15 @@
                             <div class="mx-5 h-full grid place-content-center">
                                 <div
                                     class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
-                                    <h2 class="text-3xl mb-3">Programador Backend</h2>
+                                    <h2 class="text-3xl mb-3">Desarrollador Backend</h2>
                                     <p class="text-lg">
-                                        <b class="font-bold"> Edad:</b> 21 años
+                                        <b class="font-bold"> Edad:</b> 22 años
                                     </p>
                                     <p class="text-lg">
                                         <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
                                     </p>
                                     <p class="text-lg">
-                                        <b class="font-bold"> Semestre:</b> Séptimo
+                                        <b class="font-bold"> Semestre:</b> Octavo
                                     </p>
 
                                 </div>
@@ -94,7 +94,7 @@
                                     class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
                                     <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
                                     <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
-                                        src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t1.6435-9/70506864_1388239178008145_5153636253240918016_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=tloaQBJLpUEAX9a5fo3&_nc_oc=AQn5VtJRggTuya2FfiAn2P_GKxkqfICNNynxDEEhE7mwy-TCtaV4xhYFGRFV0HfG6ttpLiYY_VQS_VC9PKlMKceu&_nc_ht=scontent.fvvi1-1.fna&oh=00_AT-Jv8k8yYJGvlwT3PBuZ9vuCTPjNxWxXgYQaTRuIj5KDw&oe=62228111"
+                                        src="{{asset('imagenes/daniel2.png')}}"
                                         alt="User avatar">
                                     <p class="capitalize text-xl mt-1">José Daniel Soliz</p>
                                     <span
