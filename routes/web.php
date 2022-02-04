@@ -45,6 +45,6 @@ Route::get('user/profile/', [UserController::class, 'show2'])->name('user.show')
 Route::patch('user/update/', [UserController::class, 'update2'])->name('user.update');
 Route::resource('users', UserController::class)->names('admin.users');
 // Contact Us Route
-Route::middleware(['auth:sanctum', 'verified'])->get('/contact-us', function () {
+Route::get('/contact-us', function () {
     return view('contact');
 })->name('contact-us');
