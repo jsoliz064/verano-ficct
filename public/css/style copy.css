@@ -131,7 +131,7 @@ background-color: #e05757;
         font-family: "Fjalla One", sans-serif;
         transform: translateX(-25%) rotate(-25deg);
         display: block;
-        left: 20%;
+        left: 100%;
         position: relative;
         font-size: 20px;
         top: auto;
