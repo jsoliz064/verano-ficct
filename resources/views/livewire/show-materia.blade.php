@@ -29,7 +29,7 @@
                 wire:click="$set('open', true)"> Registrar
             </x-jet-danger-button>
         </div>
-        <div class=" card card-body">
+        <div class="card card-body">
             {{-- @auth() --}}
 
             @if (count($materiasa))
