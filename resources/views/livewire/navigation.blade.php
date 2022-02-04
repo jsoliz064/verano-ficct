@@ -2,7 +2,7 @@
     <div class="header-content">
         <div class="logo">
             <div class="logo">
-                <img src="{{ asset('imagenes/logo.png') }}" width="30"> SUPPORT
+                <img src="{{ asset('imagenes/logo.png') }}" width="30">SUPPORT
             </div>
         </div>
         <div class="menu inline-flex" id="show-menu">
@@ -16,22 +16,20 @@
                         <a @if (Request::url() != route('materias.index'))  href="{{ route('materias.index') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
                             <i class="fas fa-book"></i>Ver Materias</a>
                     </li>
+                    <li @if (Request::url() == route('contact-us'))  class="menu-selected" @endif>
+                        <a @if (Request::url() != route('contact-us'))  href="{{ route('contact-us') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
+                            <i class="fas fa-address-book"></i>Contáctanos</a>
+                    </li>
                     @auth()
-
                         <li @if (Request::url() == route('estudiantes.index'))  class="menu-selected" @endif>
                             <a @if (Request::url() != route('estudiantes.index'))  href="{{ route('estudiantes.index') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
                                 <i class="fas fa-book"></i>Ver Estudiantes</a>
+                        @endauth
 
-                        <li @if (Request::url() == route('contact-us'))  class="menu-selected" @endif>
-                            <a @if (Request::url() != route('contact-us'))  href="{{ route('contact-us') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
-                                <i class="fas fa-address-book"></i>Contáctanos</a>
-
-                        </li>
-                    @endauth
-                    @if (!auth()->user())
-                        <li><a href="{{ route('login') }}" class="text-menu-selected text-inline">
-                                <i class="fas fa-user"></i>Login</a>
-                        </li>
+                        @if (!auth()->user())
+                    <li><a href="{{ route('login') }}" class="text-menu-selected text-inline">
+                            <i class="fas fa-user"></i>Login</a>
+                    </li>
                     @endif
 
                     @auth()
@@ -83,5 +81,6 @@
     <div class="container-cover">
     </div>
 </div>-->
+
 
 <script src="{{ asset('js/menu.js') }}"></script>
