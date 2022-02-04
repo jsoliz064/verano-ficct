@@ -73,7 +73,12 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="my-4 px-8">Vacío</div>
+                                    @if ($materia->docente!=null)
+                                        <div class="my-4 px-8">{{$materia->docente}}</div>
+                                    @else
+                                        <div class="my-4 px-8">Vacío</div>
+
+                                    @endif
                                 </td>
                                 <td class="px-8 py-6 text-md text-gray-500 font-bold">
                                     @if ($materia->inscritos == null)
@@ -85,30 +90,34 @@
                                     @endif
                                 </td>
                                 <td class=" m-3 inline-flex justify-center px-6 py-4 whitespace-nowrap flex">
+                                    @can('admin')
+                                        <div class="whitespace-nowrap flex">
+                                            <a class="ml-2 font-bold text-white rounded cursor-pointer bg-indigo-600 hover:bg-indigo-500 py-2 px-4"
+                                                href="{{ route('materia.estudiantes.show', $materia->id) }}">
+                                                <i class="fas fa-users"></i>
+                                            </a>
+                                        </div>
+                                        <div class="whitespace-nowrap flex">
+                                            <a wire:click="edit({{$materia->id}})"
+                                                class="ml-2 font-bold text-white rounded cursor-pointer bg-gray-600 hover:bg-gray-700 py-2 px-4">
+                                                <i class=" fas fa-edit"></i>
+                                            </a>
+                                        </div>
+                                    @endcan
                                     <div class="whitespace-nowrap flex">
-                                        <a class="ml-2 font-bold text-white rounded cursor-pointer bg-indigo-600 hover:bg-indigo-500 py-2 px-4"
-                                            href="{{ route('materia.estudiantes.show', $materia->id) }}">
-                                            <i class="fas fa-users"></i>
-                                        </a>
-                                    </div>
-                                    <div class="whitespace-nowrap flex">
-                                        <a
-                                            class="ml-2 font-bold text-white rounded cursor-pointer bg-gray-600 hover:bg-gray-700 py-2 px-4">
-                                            <i class=" fas fa-edit"></i>
-                                        </a>
-                                    </div>
-                                    <div class="whitespace-nowrap flex">
-                                        <a
+                                        <a  href="{{$materia->grupo}}"
                                             class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
                                             <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                         </a>
                                     </div>
-                                    <div class="whitespace-nowrap flex">
-                                        <a class="ml-2 font-bold text-white rounded cursor-pointer bg-red-600 hover:bg-red-500 py-2 px-4"
-                                            onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">
-                                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
+                                    @can('admin')
+                                        <div class="whitespace-nowrap flex">
+                                            <a  wire:click.prevent="eliminar({{$materia->id}})" class="ml-2 font-bold text-white rounded cursor-pointer bg-red-600 hover:bg-red-500 py-2 px-4"
+                                                onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">
+                                                <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    @endcan
 
                                 </td>
                             </tr>
@@ -137,46 +146,137 @@
         </x-slot>
 
         <x-slot name="content">
-
             <div class="mb-4">
-                <x-jet-label value="Nombre de la Materia" />
-                <x-jet-input type="text" class="w-full" wire:model.defer="nombre"
-                    placeholder='Escriba el nombre' />
-
+                <x-jet-label value="Sigla de la Materia:" />
+                <x-jet-input wire:model='sigla' type="text" class=" w-full"/>
             </div>
 
             <div class="mb-4">
-                <x-jet-label value="Sigla de la Materia" />
-                <x-jet-input wire:model.defer='sigla' type="text" class=" w-full"
-                    placeholder='Escriba la sigla' />
-            </div>
-
-
-            <div class="mb-4">
-                <x-jet-label value="Nombre del Docente" />
-                <x-jet-input type="text" class="w-full" wire:model.defer="docente"
-                    placeholder='Escriba el nombre del docente' />
+                <x-jet-label value="Nombre de la Materia:" />
+                <x-jet-input type="text" class="w-full" wire:model="nombre"/>
             </div>
 
             <div class="mb-4">
-                <x-jet-label value="Semestre de la Materia" />
-                <x-jet-input type="number" type="number" min="1" max="9" class="w-full"
-                    wire:model.defer="semestre" placeholder='Escriba el semestre de la materia' />
+                <x-jet-label value="Nombre del Docente:" />
+                <x-jet-input type="text" class="w-full" wire:model="docente" />
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Carrera:" />
+                    <div class="flex justify-center">
+                        <div>
+                                <div class="form-check">
+                                    <input wire:model="c1" name="carrera1" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera1->id}}" id="flexCheckDefault">
+                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                        {{$carrera1->nombre}}
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input wire:model="c2" name="carrera2" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera2->id}}" id="flexCheckDefault">
+                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                        {{$carrera2->nombre}}
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input wire:model="c3" name="carrera3" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera3->id}}" id="flexCheckDefault">
+                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                        {{$carrera3->nombre}}
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Grupo de WhatsApp:" />
+                <x-jet-input type="text" class="w-full" wire:model="grupo"
+                    placeholder='enlace del grupo' />
             </div>
 
         </x-slot>
 
         <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$set('open', false)" wire:loading.attr="disabled">
+            <x-jet-secondary-button wire:click="cancelar()" wire:loading.attr="disabled">
                 Cancelar
             </x-jet-secondary-button>
-            <x-jet-danger-button wire:click="" wire:loading.attr="disabled" class="disabled:opacity-25">
+            <x-jet-danger-button wire:click="guardar()" wire:loading.attr="disabled" class="disabled:opacity-25">
                 Crear Materia
             </x-jet-danger-button>
         </x-slot>
     </x-jet-dialog-modal>
 
+{{--  MODAL EDITAR MATERIA  --}}
+    <x-jet-dialog-modal wire:model="open2">
+
+        <x-slot name="title">
+            Crear materia:
+        </x-slot>
+
+        <x-slot name="content">
+            <div class="mb-4">
+                <x-jet-label value="Sigla de la Materia:" />
+                <x-jet-input wire:model='sigla' type="text" class=" w-full"/>
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Nombre de la Materia:" />
+                <x-jet-input type="text" class="w-full" wire:model="nombre"/>
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Nombre del Docente:" />
+                <x-jet-input type="text" class="w-full" wire:model="docente"/>
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Carrera:" />
+                    <div class="flex justify-center">
+                        <div>
+                                <div class="form-check">
+                                    <input wire:model="c1" name="carrera1" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera1->id}}" id="flexCheckDefault">
+                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                        {{$carrera1->nombre}}
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input wire:model="c2" name="carrera2" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera2->id}}" id="flexCheckDefault">
+                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                        {{$carrera2->nombre}}
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input wire:model="c3" name="carrera3" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="{{$carrera3->id}}" id="flexCheckDefault">
+                                    <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                                        {{$carrera3->nombre}}
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="mb-4">
+                <x-jet-label value="Grupo de WhatsApp:" />
+                <x-jet-input type="text" class="w-full" wire:model="grupo"
+                    placeholder='enlace del grupo'/>
+            </div>
+
+        </x-slot>
+
+        <x-slot name="footer">
+            <x-jet-secondary-button wire:click="cancelar()" wire:loading.attr="disabled">
+                Cancelar
+            </x-jet-secondary-button>
+            <x-jet-danger-button wire:click="update()" wire:loading.attr="disabled" class="disabled:opacity-25">
+                Actualizar
+            </x-jet-danger-button>
+        </x-slot>
+    </x-jet-dialog-modal>
 
 
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
 
 </div>

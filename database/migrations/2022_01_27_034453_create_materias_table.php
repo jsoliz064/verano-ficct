@@ -17,7 +17,9 @@ class CreateMateriasTable extends Migration
             $table->id();
             $table->string('sigla');
             $table->string('nombre');
+            $table->string('docente')->nullable();
             $table->integer('inscritos');
+            $table->string('grupo')->nullable();
 
             $table->timestamps();
         });

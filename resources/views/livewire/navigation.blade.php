@@ -20,16 +20,22 @@
                         <a @if (Request::url() != route('contact-us'))  href="{{ route('contact-us') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline text-selected" @endif>
                             <i class="fas fa-address-book"></i>Contáctanos</a>
                     </li>
-                    @auth()
+                    @can('admin')
                         <li @if (Request::url() == route('estudiantes.index'))  class="menu-selected" @endif>
                             <a @if (Request::url() != route('estudiantes.index'))  href="{{ route('estudiantes.index') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
                                 <i class="fas fa-book"></i>Ver Estudiantes</a>
-                        @endauth
+                    @endcan
 
-                        @if (!auth()->user())
-                    <li><a href="{{ route('login') }}" class="text-menu-selected text-inline">
-                            <i class="fas fa-user"></i>Login</a>
-                    </li>
+                    @can('admin')
+                        <li @if (Request::url() == route('admin.users.index'))  class="menu-selected" @endif>
+                            <a @if (Request::url() != route('admin.users.index'))  href="{{ route('admin.users.index') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
+                                <i class="fas fa-users"></i>Ver Users</a>
+                    @endcan
+
+                    @if (!auth()->user())
+                        <li><a href="{{ route('login') }}" class="text-menu-selected text-inline">
+                                <i class="fas fa-user"></i>Login</a>
+                        </li>
                     @endif
 
                     @auth()
