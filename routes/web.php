@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
-use App\Http\Livewire\Estudiantes;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\MateriaController;
 
 /*
@@ -39,7 +39,11 @@ Route::get('materias', function () {
 })->name('materias.index');
 
 Route::get('materias-estudiantes/{materia_id}', [MateriaController::class, 'show2'])->name('materia.estudiantes.show');
+Route::get('estudiantes', [EstudianteController::class, 'index2'])->name('estudiantes.index');
 
+Route::get('user/profile/', [UserController::class, 'show2'])->name('user.show');
+Route::patch('user/update/', [UserController::class, 'update2'])->name('user.update');
+Route::resource('users', UserController::class)->names('admin.users');
 // Contact Us Route
 Route::middleware(['auth:sanctum', 'verified'])->get('/contact-us', function () {
     return view('contact');

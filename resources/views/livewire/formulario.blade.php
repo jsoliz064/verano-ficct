@@ -1,8 +1,6 @@
-<!--<div id="move-content">-->
-<div class="background"></div>
-<div class="backdrop"></div>
-
 <div class="page2">
+    <div class="background"></div>
+    <div class="backdrop"></div>
     <div class="formulario2">
         <!-- HEADER -->
         <div class="header2">
@@ -42,6 +40,7 @@
                     <span class="input-group-addon" style="background-color:#0000;color:#ffff">
                         <i class="glyphicon glyphicon-user"></i>
                     </span>
+
                     <input id="nombre" wire:model="nombre" name="nombre" placeholder="Nombre Completo"
                         class="form-control2" size="10" min="10" maxlength="40" max="40" type="text" required>
                 </div>
@@ -130,7 +129,7 @@
 
                 <!-- Button -->
                 <div class="input-group">
-                    <button wire:click="guardar()" type="button" class="btn-login">Inscribir
+                    <button wire:click.prevent="guardar()" type="button" class="btn-login">Inscribir
                     </button>
                     @if (session()->has('message'))
                         <h4>{{ session('message') }}</h4>
@@ -159,6 +158,7 @@
         })
     </script>
 @endpush
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 <script src="{{ asset('js/formulario.js') }}"></script>
