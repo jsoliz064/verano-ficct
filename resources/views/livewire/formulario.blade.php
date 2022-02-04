@@ -129,13 +129,12 @@
 
 
                 <!-- Button -->
-                <div class="input-group">
-                    <button wire:click="guardar()" type="button" class="btn-login">Inscribir
-                    </button>
-                    @if (session()->has('message'))
-                        <h4>{{ session('message') }}</h4>
-                    @endif
-                </div>
+                <button wire:click="guardar()" type="button" class="btn-login">Inscribir
+                </button>
+                @if (session()->has('message'))
+                    <h4>{{ session('message') }}</h4>
+                @endif
+
             </form>
         </div>
     </div>

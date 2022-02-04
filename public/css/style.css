@@ -9,7 +9,9 @@
     font-family: sans-serif;
 }
 
+
 /*form styles*/
+
 
 /* BACKGROUND 
     */
@@ -45,8 +47,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
 
+
 /* BACKGROUND 
     */
+
 
 /* FORMULARIO =================================== */
 
@@ -58,6 +62,7 @@
     background-color: transparent;
 }
 
+
 /*contenedor del formulario*/
 
 .container2 {
@@ -68,6 +73,7 @@
     min-width: 324px;
     margin: 60px auto 0px;
 }
+
 
 /*contenedor del formulario*/
 
@@ -88,6 +94,7 @@
     background-repeat: no-repeat;
 }
 
+
 /* HEADER */
 
 .header2 {
@@ -100,6 +107,7 @@ background-color: #e05757;
     width: auto;
     height: 200px;
 }
+
 
 /* imagene-logo */
 
@@ -117,6 +125,7 @@ background-color: #e05757;
     box-shadow: 0px 0px 50px 8px #ec3d1e;
     -webkit-box-shadow: 0px 0px 50px 8px #ec361e;
 }
+
 
 /* imagene-logo */
 
@@ -159,6 +168,7 @@ background-color: #e05757;
     font-style: italic;
 }
 
+
 /* letra escribe automaticamente */
 
 .hidden {
@@ -184,7 +194,9 @@ background-color: #e05757;
     font-size: 20px;
 }
 
+
 /* letra escribe automaticamente */
+
 
 /* logo 
 .formulario2 .header2 .logo2 {
@@ -206,6 +218,7 @@ background-color: #e05757;
     margin: 5px;
 }
 */
+
 
 /* INPUT */
 
@@ -241,6 +254,7 @@ background-color: #e05757;
     cursor: pointer;
 }
 
+
 /* EXTRAS */
 
 .formulario2 .remember {
@@ -263,6 +277,7 @@ background-color: #e05757;
     color: #030303;
 }
 
+
 /* BOTOES */
 
 .btn-login {
@@ -280,6 +295,7 @@ background-color: #e05757;
     color: #ffffff;
 }
 
+
 /* BOTOES */
 
 @media (max-width: 261px) {
@@ -293,6 +309,7 @@ background-color: #e05757;
         display: none !important;
     }
 }
+
 
 /*alerta*/
 
@@ -392,6 +409,7 @@ background-color: #e05757;
     width: auto;
     color: #fff;
 }
+
 .menu .text-inline {
     white-space: nowrap;
 }
@@ -420,12 +438,12 @@ background-color: #e05757;
     color: #7f1d1d;
 }
 
+
 /* Portada Principal
 .icon-menu a.active {
     background-color: #FF3232;
     color: #fff;
 }
-
 */
 
 .container-cover {
@@ -497,6 +515,7 @@ background-color: #e05757;
 .container-aside aside button:hover {
     opacity: 0.9;
 }
+
 
 /*Responsive Design - Adaptable a dispositivos móviles*/
 
