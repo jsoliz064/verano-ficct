@@ -17,15 +17,15 @@
                             <i class="fas fa-book"></i>Ver Materias</a>
                     </li>
                     @auth()
-<<<<<<< HEAD
+
                         <li @if (Request::url() == route('estudiantes.index'))  class="menu-selected" @endif>
                             <a @if (Request::url() != route('estudiantes.index'))  href="{{ route('estudiantes.index') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
                                 <i class="fas fa-book"></i>Ver Estudiantes</a>
-=======
+
                         <li @if (Request::url() == route('contact-us'))  class="menu-selected" @endif>
                             <a @if (Request::url() != route('contact-us'))  href="{{ route('contact-us') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline" @endif>
                                 <i class="fas fa-address-book"></i>Contáctanos</a>
->>>>>>> e957238fcdbc89b8c79156f0ae22e7d2027429f6
+
                         </li>
                     @endauth
                     @if (!auth()->user())
