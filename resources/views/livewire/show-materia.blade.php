@@ -16,7 +16,7 @@
                 <select wire:model='cant'
                     class="mr-2 px-8 py-2 border-gray-300 text-left text-md rounded-2xl font-medium text-black-600 uppercase tracking-wider ">
                     <option value="5">5</option>
-                    <option value="2">2</option>
+                    <option value="10">10</option>
                     <option value="20">20</option>
                     <option value="50">50</option>
                 </select>
