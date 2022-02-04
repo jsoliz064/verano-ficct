@@ -129,6 +129,7 @@
 
 
                 <!-- Button -->
+
                 <button wire:click="guardar()" type="button" class="btn-login">Inscribir
                 </button>
                 @if (session()->has('message'))
