@@ -1,13 +1,15 @@
 <div class="page-formulario">
+    <br><br><br>
     <div class="background"></div>
     <div class="backdrop"></div>
     <div class="formulario-div">
         <!-- HEADER -->
         <div class="header2">
-            <h1 class="h1">
-                <span class="title">VERANO <br>3/2021 </span>
-            </h1>
             <center>
+                <h1 class="h1">
+                    <span class="title">VERANO <br>3/2021 </span>
+                </h1>
+
                 <img class="imagen" src="{{ asset('imagenes/logo.png') }}" width="150">
             </center>
 
@@ -49,8 +51,7 @@
                     <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
                             class="fas fa-clipboard"></i></span>
                     <input id="registro" wire:model="registro" class="form-control2" placeholder="000000000" type="tel"
-                        size="5" pattern="[0-9-+()]{4,9}" min="4" maxlength="9" max="9" class="form-control2"
-                        width=100vw required>
+                        size="5" pattern="[0-9-+()]{4,9}" min="4" maxlength="9" max="9" width=100vw required>
                 </div>
 
 

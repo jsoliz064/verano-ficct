@@ -45,8 +45,10 @@
         /* FORMULARIO =================================== */
         
         .page-formulario {
-            min-height: 140vh;
+            /* min-height: 140vh;
             display: flex;
+            */
+            position: relative;
         }
         /*contenedor del formulario*/
         
@@ -144,7 +146,7 @@
             display: block;
             left: 80%;
             position: relative;
-            font-size: 15px;
+            font-size: 18px;
             top: 0px;
             color: #ef940a;
             font-weight: bold;
@@ -174,27 +176,6 @@
             font-weight: bold;
             font-size: 20px;
         }
-        /* letra escribe automaticamente */
-        /* logo 
-.formulario-div .header2 .logo2 {
-    border: 1px solid #CCC;
-    border-radius: 50%;
-    margin: 0 auto;
-    width: 870px;
-    height: 807px;
-    background-color: red;
-}
-.formulario-div .header2 .logo2 .logo-area2 {
-    border: 1px solid rgb(88, 88, 88);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 75px;
-    height: 75px;
-    margin: 5px;
-}
-*/
         /* INPUT */
         
         .icone {
@@ -225,7 +206,7 @@
             outline: none;
         }
         
-        .formulario-div #show-password {
+        #show-password {
             cursor: pointer;
         }
         /* EXTRAS */
@@ -234,7 +215,7 @@
             margin-top: 15px;
         }
         
-        .formulario-div .remember a {
+        .remember a {
             float: right;
         }
         
@@ -243,7 +224,7 @@
         }
         
         .form-control2 {
-            width: 100%;
+            width: 87%;
             height: 35px;
             border-radius: 0px 5px 5px 0px;
             font-size: 14px;
@@ -255,7 +236,7 @@
             background: #ec0708;
             color: #ffffff;
             margin-top: 15px;
-            width: 100%;
+            width: 89%;
             height: 40px;
             font-size: 25px;
             border-radius: 5px;
