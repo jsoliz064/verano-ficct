@@ -153,36 +153,13 @@ background-color: #e05757;
         text-align: center;
         overflow: hidden;
     }
-    /* letra escribe automaticamente */
-    /* logo 
-.formulario-div .header2 .logo2 {
-    border: 1px solid #CCC;
-    border-radius: 50%;
-    margin: 0 auto;
-    width: 870px;
-    height: 807px;
-    background-color: red;
-}
-.formulario-div .header2 .logo2 .logo-area2 {
-    border: 1px solid rgb(88, 88, 88);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 75px;
-    height: 75px;
-    margin: 5px;
-}
-*/
     /* INPUT */
     
     .icone {
         width: 30px;
         vertical-align: middle;
         border: 0;
-        /**/
         padding: 0;
-        /**/
     }
     
     .input2 {

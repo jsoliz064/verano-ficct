@@ -33,7 +33,7 @@
             <form id="contact_form">
                 <!--<fieldset>-->
                 <!-- Text input-->
-                Nombre Completo
+                <span class="form-title">Nombre Completo</span>
                 <div class="input-group">
                     <span class="input-group-addon" style="background-color:#ec0708;color:#ffff">
                         <i class="glyphicon glyphicon-user"></i>
@@ -46,36 +46,34 @@
 
 
                 <!-- Text input-->
-                Registro
+                <span class="form-title">Registro</span>
                 <div class="input-group">
                     <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
                             class="fas fa-clipboard"></i></span>
                     <input id="registro" wire:model="registro" class="form-control2" placeholder="000000000" type="tel"
-                        size="5" pattern="[0-9-+()]{4,9}" min="4" maxlength="9" max="9" width=100vw required>
+                        size="5" pattern="[0-9-+()]{4,9}" min="4" maxlength="9" max="9" required>
                 </div>
 
 
 
 
                 <!-- Text input-->
-                Telefono
+                <span class="form-title">Telefono</span>
                 <div class="input-group">
                     <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
                             class="glyphicon glyphicon-earphone"></i></span>
                     <input id="telefono" wire:model="telefono" placeholder="+591 XXXXXXX" type="tel" size="5"
-                        pattern="[0-9-+()]{8,8}" min="8" maxlength="8" max="8" class="form-control2" width=100vw
-                        required>
+                        pattern="[0-9-+()]{8,8}" min="8" maxlength="8" max="8" class="form-control2" required>
                 </div>
 
 
 
                 <!-- Text input-->
-                Carrera
+                <span class="form-title">Carrera</span>
                 <div class="input-group">
                     <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
                             class="glyphicon glyphicon-list"></i></span>
-                    <select class="form-control2 mi-selector1" wire:model="carrera_id" name="carrera" width=100vw
-                        required>
+                    <select class="form-control2 " wire:model="carrera_id" name="carrera" required>
                         <option value="">Seleccione una opción</option>
                         @foreach ($carreras as $carrera)
                             <option value="{{ $carrera->id }}">
@@ -91,12 +89,11 @@
 
 
                 <!-- Select Basic -->
-                Materia 1
+                <span class="form-title">Materia 1</span>
                 <div class="input-group">
                     <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
                             class="glyphicon glyphicon-list"></i></span>
-                    <select class="form-control2 mi-selector2" id="materia1" wire:model="materia1" name="materia1"
-                        width=100vw required>
+                    <select class="form-control2 " id="materia1" wire:model="materia1" name="materia1" required>
                         <option value="">Selccione una opcion</option>
                         @foreach ($materias as $materia)
                             <option value="{{ $materia->id }}">
@@ -110,12 +107,12 @@
 
                 <!-- Text input-->
 
-                Materia 2
+                <span class="form-title">Materia 2</span>
                 <div class="input-group">
                     <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
                             class="glyphicon glyphicon-list"></i></span>
-                    <select class="form-control2 mi-selector3" id="materia2" wire:model="materia2" name="materia2"
-                        width=100vw required>
+                    <select class="form-control2 " id="materia2" wire:model="materia2" name="materia2" width=100vw
+                        required>
                         <option value="">Selccione una opcion</option>
                         @foreach ($materias as $materia)
                             <option value="{{ $materia->id }}">
