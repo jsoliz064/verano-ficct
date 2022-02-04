@@ -8,7 +8,7 @@
                 <h1 class="h1">
                     <span class="title">Ficct</span>
                     <span class="title">Inscribete</span>
-                    <span class="title">:)</span>
+
                 </h1>
             </section>
             <br>

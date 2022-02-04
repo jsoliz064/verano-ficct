@@ -59,7 +59,7 @@
         align-items: center;
     justify-content: center;
     */
-    min-height: 120vh;
+    min-height: 125vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,7 +150,6 @@ background-color: #e05757;
     display: block;
     text-align: center;
     padding: 0;
-    position: absolute;
     top: 0;
 }
 
@@ -167,7 +166,7 @@ background-color: #e05757;
     position: relative;
     font-size: 20px;
     top: auto;
-    color: rgb(248, 244, 244);
+    color: rgb(240, 27, 27);
     font-style: italic;
 }
 
