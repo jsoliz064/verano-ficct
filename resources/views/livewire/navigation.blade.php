@@ -40,7 +40,7 @@
 
                     @auth()
                         <li>
-                            <div class="w-48 h-12 flex flex-row  flex-wrap px-2 py-2 mx-4">
+                            <div class="w-48 h-12 flex flex-row flex-wrap px-2 py-2 mx-4">
                                 <div class="mx-auto w-3">
                                     <!-- Profile Card -->
                                     <div class=" w-48 h-12  rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3 antialiased"

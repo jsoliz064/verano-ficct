@@ -39,6 +39,9 @@ class Formulario extends Component
             } else {
                 $estudiante->materias()->attach($this->materia1);
             }
+            $this->emit('alert', '¡Has registrado exitosamente tus datos!');
+        } else {
+            $this->emit('alert2', '¡Introduce tus datos correctamente!');
         }
         $this->limpiar();
     }
