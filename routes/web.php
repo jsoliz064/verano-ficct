@@ -38,9 +38,13 @@ Route::get('materias', function () {
     return view('materia.index');
 })->name('materias.index');
 
-Route::get('materias-estudiantes/{materia_id}',[MateriaController::class,'show2'])->name('materia.estudiantes.show');
-Route::get('estudiantes',[EstudianteController::class,'index2'])->name('estudiantes.index');
+Route::get('materias-estudiantes/{materia_id}', [MateriaController::class, 'show2'])->name('materia.estudiantes.show');
+Route::get('estudiantes', [EstudianteController::class, 'index2'])->name('estudiantes.index');
 
-Route::get('user/profile/',[UserController::class,'show2'])->name('user.show');
-Route::patch('user/update/',[UserController::class,'update2'])->name('user.update');
-Route::resource('users',UserController::class)->names('admin.users');
+Route::get('user/profile/', [UserController::class, 'show2'])->name('user.show');
+Route::patch('user/update/', [UserController::class, 'update2'])->name('user.update');
+Route::resource('users', UserController::class)->names('admin.users');
+// Contact Us Route
+Route::middleware(['auth:sanctum', 'verified'])->get('/contact-us', function () {
+    return view('contact');
+})->name('contact-us');

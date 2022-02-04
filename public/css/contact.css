@@ -1,0 +1,19 @@
+.card_1 {
+    position: relative;
+    left: -100%;
+}
+
+.card_2 {
+    position: relative;
+    left: 100%;
+}
+
+.card_3 {
+    position: relative;
+    left: -100%;
+}
+
+.card_4 {
+    position: relative;
+    left: 100%;
+}
