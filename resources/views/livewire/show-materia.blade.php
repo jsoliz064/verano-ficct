@@ -26,13 +26,13 @@
                 <x-jet-input type="text" class="flex-1 mr-3 rounded-full w-full py-2 px-4 text-md"
                     placeholder="Escriba el nombre de la materia" wire:model="search" />
                 @auth()
-                <x-jet-danger-button
-                    class="font-bold text-white text-md bg-red-500 rounded cursor-pointer hover:bg-red-600 py-2 px-4 "
-                    wire:click="$set('open', true)"> Registrar
-                </x-jet-danger-button>
+                    <x-jet-danger-button
+                        class="font-bold text-white text-md bg-red-500 rounded cursor-pointer hover:bg-red-600 py-2 px-4 "
+                        wire:click="$set('open', true)"> Registrar
+                    </x-jet-danger-button>
                 @endauth
             </div>
-            
+
 
             @if (count($materiasa))
                 <table class=" table table-striped min-w-full divide-y divide-gray-200 text-md shadow-lg mt-4 border-5">
@@ -58,7 +58,7 @@
                     </thead>
                     <tbody>
                         @foreach ($materiasa as $materia)
-                            <tr class="mx-4 my-4 divide-y divide-gray-200 bg-gray-100">
+                            <tr class="mx-3 my-3 divide-y divide-gray-200 bg-gray-50">
                                 <td class="px-4 py-2">
                                     <span
                                         class="px-2 py-1 inline-flex text-xl leading-10 font-semibold rounded-full
@@ -106,10 +106,17 @@
                                         </div>
                                     @endcan
                                     <div class=" my-3 whitespace-nowrap flex">
-                                        <a href="{{ $materia->grupo }}"
-                                            class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
-                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                        </a>
+                                        @if ($materia->grupo)
+                                            <a href=""
+                                                class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
+                                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            </a>
+                                        @else
+                                            <a wire:click="$emit('alert2','¡No hay grupo!')"
+                                                class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
+                                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            </a>
+                                        @endif
                                     </div>
                                     @can('admin')
                                         <div class=" my-3 whitespace-nowrap flex">
@@ -292,7 +299,49 @@
     </x-jet-dialog-modal>
 
 
+
+
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+
+
+
+    @push('js')
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+        <script>
+            Livewire.on("alert", alert => {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: '¡Has inscrito tus materias exitosamente!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+        </script>
+        <script>
+            Livewire.on("alert2", function(message) {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 2500,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener("mouseenter", Swal.stopTimer);
+                        toast.addEventListener("mouseleave", Swal.resumeTimer);
+                    },
+                });
+                Toast.fire({
+                    icon: "error",
+                    title: message,
+                });
+            });
+        </script>
+
+    @endpush
 
 
 </div>

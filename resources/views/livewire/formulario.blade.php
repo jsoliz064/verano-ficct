@@ -84,37 +84,34 @@
 
                 <!-- Select Basic -->
                 <span class="form-title">Materia 1</span>
-                <div class="input-group">
-                    <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
+                <div class="mb-4 w-full inline-flex" wire:ignore>
+                    <span class="input-group-addon pr-5" style="background-color:#ec0708;color:#ffff"><i
                             class="glyphicon glyphicon-list"></i></span>
-                    <select class="form-control2 " id="materia1" wire:model="materia1" name="materia1" required>
-                        <option value="">Selccione una opcion</option>
+                    <select wire:model='materia1' class="idMateria1" name="materia1" style='width: 100%' required>
+                        <option value="">Seleccione una materia</option>
                         @foreach ($materias as $materia)
-                            <option value="{{ $materia->id }}">
-                                {{ $materia->nombre }}
-                            </option>
+                            <option value="{{ $materia->id }}">{{ $materia->nombre }} </option>
                         @endforeach
                     </select>
                 </div>
+
 
 
 
                 <!-- Text input-->
-
+                <!-- Select Basic -->
                 <span class="form-title">Materia 2</span>
-                <div class="input-group">
-                    <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
+                <div class="mb-4 w-full inline-flex" wire:ignore>
+                    <span class="input-group-addon pr-5" style="background-color:#ec0708;color:#ffff"><i
                             class="glyphicon glyphicon-list"></i></span>
-                    <select class="form-control2 " id="materia2" wire:model="materia2" name="materia2" width=100vw
-                        required>
-                        <option value="">Selccione una opcion</option>
+                    <select wire:model='materia2' class="idMateria2" name="materia2" style='width: 100%' required>
+                        <option value="">Selecciona una materia</option>
                         @foreach ($materias as $materia)
-                            <option value="{{ $materia->id }}">
-                                {{ $materia->nombre }}
-                            </option>
+                            <option value="{{ $materia->id }}">{{ $materia->nombre }} </option>
                         @endforeach
                     </select>
                 </div>
+
 
 
                 <!-- Button -->
@@ -134,6 +131,32 @@
     </div>
 </div>
 <!-- </div>/.container -->
+
+<script>
+    document.addEventListener('livewire:load', function() {
+        $('.idMateria1').select2({
+            placeholder: "Selecciona una materia",
+            allowClear: true,
+            minimumInputLength: 1,
+        });
+        $('.idMateria1').on('change', function() {
+            @this.set('materia1', this.value);
+        })
+    })
+</script>
+
+<script>
+    document.addEventListener('livewire:load', function() {
+        $('.idMateria2').select2({
+            placeholder: "Selecciona una materia",
+            allowClear: true,
+            minimumInputLength: 1,
+        });
+        $('.idMateria2').on('change', function() {
+            @this.set('materia2', this.value);
+        })
+    })
+</script>
 
 
 <!-------------->
@@ -176,6 +199,7 @@
 @endpush
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
+<!--------------------------------------------- SELECT SCRIPTS ---------------------------------------------->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 <script src="{{ asset('js/formulario.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
