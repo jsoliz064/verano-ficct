@@ -14,7 +14,7 @@ class ShowMateria extends Component
 
     public $materia_id, $sigla, $nombre, $docente, $grupo;
     public $search = "";
-    public $cant = 2;
+    public $cant = 5;
     public $open = false;
     public $open2 = false;
     public $carrera1, $carrera2, $carrera3, $c1, $c2, $c3, $cr1, $cr2, $cr3;
