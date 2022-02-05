@@ -99,8 +99,11 @@
                                 <p class="capitalize text-xl mt-1 mb-5">José Daniel Soliz</p>
 
                                 <div style="white-space: nowrap">
-                                    <button class="rounded-md whatsapp-button text-xl text-white pt-3 pb-4 px-8 inline">
-                                        Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+                                    <a href="https://wa.me/59169086228?text=Hola,%20necesito%20ayuda" target="_blank">
+                                        <button
+                                            class="rounded-md whatsapp-button text-xl text-white pt-3 pb-4 px-8 inline">
+                                            Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

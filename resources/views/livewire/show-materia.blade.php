@@ -17,14 +17,14 @@
                     <select wire:model='cant'
                         class="mr-2 px-8 py-2 border-gray-300 text-left text-md rounded-2xl font-medium text-black-600 uppercase tracking-wider ">
                         <option value="5">5</option>
-                        <option value="10">10</option>
                         <option value="20">20</option>
                         <option value="50">50</option>
+                        <option value="100">100</option>
                     </select>
                     <span class="ml-4 mr-2 font-bold">Buscar</span>
                 </div>
                 <x-jet-input type="text" class="flex-1 mr-3 rounded-full w-full py-2 px-4 text-md"
-                    placeholder="Escriba el nombre de la materia" wire:model="search" />
+                    placeholder="Escriba el nombre o la sigla de la materia" wire:model="search" />
                 @auth()
                     <x-jet-danger-button
                         class="font-bold text-white text-md bg-red-500 rounded cursor-pointer hover:bg-red-600 py-2 px-4 "
