@@ -124,6 +124,7 @@
             */
             opacity: 0.9;
             font-family: 'Gudea', sans-serif;
+            font-weight: bold;
         }
         
         .texto.ficct p {
@@ -152,11 +153,11 @@
             letter-spacing: 5px;
             font-family: "Fjalla One", sans-serif;
             font-family: cursive;
-            transform: translateX(-35%) rotate(-35deg);
+            transform: translateX(-45%) rotate(-45deg);
             display: block;
-            left: 80%;
+            left: 95%;
             position: relative;
-            font-size: 18px;
+            font-size: 15px;
             top: 0px;
             color: #ef940a;
             font-weight: bold;
