@@ -58,7 +58,7 @@
         z-index: 1;
         max-width: 510px;
         min-width: 324px;
-        margin: 20px auto 0px;
+        /*margin: 20px auto 0px;*/
     }
     /*contenedor del formulario*/
     
@@ -111,7 +111,7 @@
     transform: scale(0.48);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
         border-radius: 1%;
-        -webkit-border-radius: 60%;
+        -webkit-border-radius: 50%;
         box-shadow: 0px 0px 50px 8px #ec3d1e;
         -webkit-box-shadow: 0px 0px 50px 8px #ec361e;
     }
