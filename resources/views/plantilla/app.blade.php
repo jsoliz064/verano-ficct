@@ -36,17 +36,15 @@
 </head>
 
 <body>
-    <div id="move-content">
-    </div>
+
     @livewire('navigation')
 
 
 
     <!-- Loading screen -->
 
-    <div class="flex flex-col flex-1 h-full overflow-hidden">
-    </div>
-    <main class="flex-1 max-h-full p-5 py-1 overflow-hidden overflow-y-scroll">
+
+    <main class="flex-1 max-h-full bg-gray-200 p-5 py-1 overflow-hidden overflow-y-scroll">
         @yield('content')
     </main>
 

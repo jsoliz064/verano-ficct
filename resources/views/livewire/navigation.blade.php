@@ -40,8 +40,8 @@
 
                     @auth()
                         <li>
-                            <div class="w-48 h-12 flex flex-row flex-wrap px-2 py-2 mx-4">
-                                <div class="mx-auto w-3">
+                            <div class="w-48 h-12 flex flex-row flex-wrap px-6 py-1 mx-4">
+                                <div class="mx-4 w-3">
                                     <!-- Profile Card -->
                                     <div class=" w-48 h-12  rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3 antialiased"
                                         style=" background-image: url('https://scontent.fvvi1-2.fna.fbcdn.net/v/t31.18172-8/26685190_10156033184973328_4998021523262411079_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8631f5&_nc_ohc=GGpFO00RA6IAX_jhdI6&tn=IiT3yrQzUFVwhSAd&_nc_ht=scontent.fvvi1-2.fna&oh=00_AT9F3hO8qsddnSW8tYyKmvqr6heks_pI6sguTwCVTsiEcg&oe=621FC837');background-repeat: no-repat;background-size: cover;background-blend-mode: multiply;">
