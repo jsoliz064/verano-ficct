@@ -56,11 +56,8 @@
                                 <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
                                 <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
                                     src="{{ asset('imagenes/diego.jpg') }}" alt="User avatar">
-                                <p class="capitalize text-xl mt-1">Diego Hurtado Vargas</p>
-                                <span
-                                    class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
-                                    <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Activo
-                                </span>
+                                <p class="capitalize text-xl mt-1 mb-5">Diego Hurtado Vargas</p>
+
                                 <div style="white-space: nowrap">
                                     <a href="https://wa.me/59171310964?text=Hola,%20necesito%20ayuda!" target="_blank">
                                         <button
@@ -99,11 +96,8 @@
                                 <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
                                 <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
                                     src="{{ asset('imagenes/daniel2.png') }}" alt="User avatar">
-                                <p class="capitalize text-xl mt-1">José Daniel Soliz</p>
-                                <span
-                                    class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
-                                    <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Activo
-                                </span>
+                                <p class="capitalize text-xl mt-1 mb-5">José Daniel Soliz</p>
+
                                 <div style="white-space: nowrap">
                                     <button
                                         class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
@@ -141,11 +135,8 @@
                                 <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
                                     src="{{ asset('imagenes/luishiño.png') }}" alt="User avatar">
                                 <p>Hola, soy</p>
-                                <p class="capitalize text-xl mt-1">Luishiño Pericena</p>
-                                <span
-                                    class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
-                                    <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Activo
-                                </span>
+                                <p class="capitalize text-xl mt-1 mb-5">Luishiño Pericena</p>
+
                                 <div style="white-space: nowrap">
                                     <a href="https://t.me/user12p" target="_blank">
                                         <button

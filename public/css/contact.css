@@ -22,6 +22,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /*background-image: linear-gradient( 179.2deg, black 0%, #7f1d1d 33%, #eab308 76.7%, #fef08a 85.4%, white 100.1%);*/
-    background: #e5e7eb;
+    background-image: linear-gradient(179.2deg, #eab308 5.7%, #e5e7eb 100.1%);
+    /*background: #e5e7eb;*/
 }
