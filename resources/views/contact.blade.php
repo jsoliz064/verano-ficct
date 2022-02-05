@@ -59,7 +59,7 @@
                                 <p class="capitalize text-xl mt-1 mb-5">Diego Hurtado Vargas</p>
 
                                 <div style="white-space: nowrap">
-                                    <a href="https://wa.me/59171310964?text=Hola,%20necesito%20ayuda!" target="_blank">
+                                    <a href="https://wa.me/59171310964?text=Hola,%20necesito%20ayuda" target="_blank">
                                         <button
                                             class="rounded-md whatsapp-button text-xl text-white pt-3 pb-4 px-8 inline">
                                             Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
