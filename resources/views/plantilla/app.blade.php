@@ -41,26 +41,26 @@
     @livewire('navigation')
 
 
-    <div class="flex h-screen overflow-y-hidden bg-gray-100" x-data="setup()"
+    <!-- <div class="flex h-screen overflow-y-hidden bg-gray-100" x-data="setup()"
         x-init="$refs.loading.classList.add('hidden')">
+    </div>-->
+    <!-- Loading screen -->
 
-        <!-- Loading screen -->
+    <div class="flex flex-col flex-1 h-full overflow-hidden">
 
-        <div class="flex flex-col flex-1 h-full overflow-hidden">
+        <main class="flex-1 max-h-full p-5 py-1 overflow-hidden overflow-y-scroll">
 
-            <main class="flex-1 max-h-full p-5 py-1 overflow-hidden overflow-y-scroll">
+            @yield('content')
 
-                @yield('content')
-
-            </main>
-
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-        @livewireScripts
-        @stack('js')
+        </main>
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    @livewireScripts
+    @stack('js')
+
+
 
 
 </body>

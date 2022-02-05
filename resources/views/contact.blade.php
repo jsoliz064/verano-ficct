@@ -40,9 +40,9 @@
                             <div
                                 class="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
                                 <h2 class="text-3xl mb-3">Desarrollador Frontend</h2>
-                                <p class="text-lg">
+                                <!--<p class="text-lg">
                                     <b class="font-bold"> Edad:</b> 21 años
-                                </p>
+                                </p>-->
                                 <p class="text-lg">
                                     <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
                                 </p>
@@ -55,8 +55,7 @@
                                 class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
                                 <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
                                 <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
-                                    src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t1.6435-9/70506864_1388239178008145_5153636253240918016_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=tloaQBJLpUEAX9a5fo3&_nc_oc=AQn5VtJRggTuya2FfiAn2P_GKxkqfICNNynxDEEhE7mwy-TCtaV4xhYFGRFV0HfG6ttpLiYY_VQS_VC9PKlMKceu&_nc_ht=scontent.fvvi1-1.fna&oh=00_AT-Jv8k8yYJGvlwT3PBuZ9vuCTPjNxWxXgYQaTRuIj5KDw&oe=62228111"
-                                    alt="User avatar">
+                                    src="{{ asset('imagenes/diego.jpg') }}" alt="User avatar">
                                 <p class="capitalize text-xl mt-1">Diego Hurtado Vargas</p>
                                 <span
                                     class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
@@ -82,9 +81,9 @@
                             <div
                                 class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
                                 <h2 class="text-3xl mb-3">Desarrollador Backend</h2>
-                                <p class="text-lg">
+                                <!--<p class="text-lg">
                                     <b class="font-bold"> Edad:</b> 22 años
-                                </p>
+                                </p>-->
                                 <p class="text-lg">
                                     <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
                                 </p>
@@ -122,31 +121,33 @@
                             <div
                                 class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
                                 <h2 class="text-3xl mb-3">Desarrollador Frontend</h2>
-                                <p class="text-lg">
+                                <!--<p class="text-lg">
                                     <b class="font-bold"> Edad:</b> 21 años
-                                </p>
+                                </p>-->
                                 <p class="text-lg">
                                     <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
                                 </p>
                                 <p class="text-lg">
-                                    <b class="font-bold"> Semestre:</b> Sexto
+                                    <b class="font-bold"> Semestre:</b> Séptimo
                                 </p>
 
                             </div>
                             <div
                                 class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
                                 <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
-                                <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg" src=""
-                                    alt="User avatar">
-                                <p class="capitalize text-xl mt-1">Luisinho</p>
+                                <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
+                                    src="{{ asset('imagenes/luishiño.png') }}" alt="User avatar">
+                                <p class="capitalize text-xl mt-1">Luishiño Pericena</p>
                                 <span
                                     class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
                                     <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Activo
                                 </span>
                                 <div style="white-space: nowrap">
-                                    <button
-                                        class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
-                                        Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+                                    <a href="https://t.me/user12p" target="_blank">
+                                        <button
+                                            class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
+                                            Enviar un mensaje <i class="fa fa-telegram" aria-hidden="true"></i></button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
