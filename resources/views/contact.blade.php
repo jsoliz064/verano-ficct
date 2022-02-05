@@ -62,7 +62,7 @@
                                     <div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Activo
                                 </span>
                                 <div style="white-space: nowrap">
-                                    <a href="https://wa.me/59171310964?text=Hola,%20necesito%20ayuda" target="_blank">
+                                    <a href="https://wa.me/59171310964?text=Hola,%20necesito%20ayuda!" target="_blank">
                                         <button
                                             class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
                                             Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
