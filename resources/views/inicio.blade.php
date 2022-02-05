@@ -4,8 +4,6 @@
 
 @section('content')
     @livewire('formulario')
-
-    {{--  @livewire('estudiantes')  --}}
 @stop
 
 @section('css')
