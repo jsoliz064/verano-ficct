@@ -26,7 +26,7 @@ class Formulario extends Component
     }
     public function guardar()
     {
-        if ($this->carrera_id != null && $this->materia1 != null) {
+        if ($this->nombre != null && $this->registro != null && $this->carrera_id != null && $this->materia1 != null) {
             $estudiante = Estudiante::create([
                 'registro' => $this->registro,
                 'nombre' => $this->nombre,

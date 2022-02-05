@@ -8,7 +8,7 @@
         <div class="menu inline-flex" id="show-menu">
             <nav>
                 <ul>
-                    <li @if (Request::url() == route('inicio'))  @endif>
+                    <li @if (Request::url() == route('inicio')) class="menu-selected"  @endif>
                         <a @if (Request::url() != route('inicio')) href="{{ route('inicio') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline text-selected" @endif>
                             <i class="fas fa-home"></i>Inicio</a>
                     </li>
