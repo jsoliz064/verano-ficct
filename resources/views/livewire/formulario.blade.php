@@ -15,8 +15,8 @@
                     <div class='console-underscore' id='console'>|</div>
                 </div>
 
-                <p class="texto.ficct"> Hola , Bienvenido al formulario Ficct ⚡⚡⚡<br>
-                    para habilitar tu materia para veranito. 📚 <br>
+                <p class="textoficct"> ⚡Bienvenido al formulario ⚡<br>
+                    para habilitar tu materia rellena los campos vacio . 📚 <br>
                 </p>
 
             </center>
@@ -29,7 +29,7 @@
                 <!-- Text input-->
                 <span class="form-title">Nombre Completo</span>
                 <div class="input-group">
-                    <span class="input-group-addon" style="background-color:#ec0708;color:#ffff">
+                    <span class="input-group-addon" style="width: 12%;background-color:#ec0708;color:#ffff">
                         <i class="glyphicon glyphicon-user"></i>
                     </span>
 
@@ -42,22 +42,23 @@
                 <!-- Text input-->
                 <span class="form-title">Registro</span>
                 <div class="input-group">
-                    <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
-                            class="fas fa-clipboard"></i></span>
-                    <input id="registro" wire:model="registro" class="form-control2" placeholder="000000000" type="tel"
+                    <span class="input-group-addon" style="width: 12%;background-color:#ec0708;color:#ffff">
+                        <i class="fas fa-layer-group"></i>
+                    </span>
+                    <input id="registro" wire:model="registro" placeholder="000000000" class="form-control2" type="tel"
                         size="5" pattern="[0-9-+()]{4,9}" min="4" maxlength="9" max="9" required>
                 </div>
-
 
 
 
                 <!-- Text input-->
                 <span class="form-title">Telefono</span>
                 <div class="input-group">
-                    <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
-                            class="glyphicon glyphicon-earphone"></i></span>
+                    <span class="input-group-addon" style="width: 12%;background-color:#ec0708;color:#ffff">
+                        <i class="glyphicon glyphicon-earphone"></i></span>
                     <input id="telefono" wire:model="telefono" placeholder="+591 XXXXXXX" type="tel" size="5"
-                        pattern="[0-9-+()]{8,8}" min="8" maxlength="8" max="8" class="form-control2" required>
+                        pattern="[0-9-+()]{8,8}" min="8" maxlength="8" max="8" class="form-control2"
+                        style='width: 100%' required>
                 </div>
 
 
@@ -65,12 +66,14 @@
                 <!-- Text input-->
                 <span class="form-title">Carrera</span>
                 <div class="input-group">
-                    <span class="input-group-addon" style="background-color:#ec0708;color:#ffff"><i
-                            class="glyphicon glyphicon-list"></i></span>
-                    <select class="form-control2 " wire:model="carrera_id" name="carrera" required>
-                        <option value="">Seleccione una opción</option>
+                    <span class="input-group-addon" style="background-color:#ec0708;color:#ffff">
+                        <i class="glyphicon glyphicon-list"></i></span>
+                    <select class="form-control2 " wire:model="carrera_id" name="carrera" style='width: 100%' required>
+                        <option value="" style="background-color:#eb1b1d;color:rgb(255, 255, 255)">Seleccione una opción
+                        </option>
                         @foreach ($carreras as $carrera)
-                            <option value="{{ $carrera->id }}">
+                            <option value="{{ $carrera->id }}"
+                                style="background-color:#eb1b1d;color:rgb(255, 255, 255)">
                                 {{ $carrera->nombre }}
                             </option>
                         @endforeach
@@ -85,8 +88,8 @@
                 <!-- Select Basic -->
                 <span class="form-title">Materia 1</span>
                 <div class="mb-4 w-full inline-flex" wire:ignore>
-                    <span class="input-group-addon pr-5" style="background-color:#ec0708;color:#ffff"><i
-                            class="glyphicon glyphicon-list"></i></span>
+                    <span class="input-group-addon pr-5" style="width: 12%;background-color:#ec0708;color:#ffff">
+                        <i class="glyphicon glyphicon-list"></i></span>
                     <select wire:model='materia1' class="idMateria1" name="materia1" style='width: 100%' required>
                         <option value="">Seleccione una materia</option>
                         @foreach ($materias as $materia)
@@ -102,8 +105,8 @@
                 <!-- Select Basic -->
                 <span class="form-title">Materia 2</span>
                 <div class="mb-4 w-full inline-flex" wire:ignore>
-                    <span class="input-group-addon pr-5" style="background-color:#ec0708;color:#ffff"><i
-                            class="glyphicon glyphicon-list"></i></span>
+                    <span class="input-group-addon pr-5" style="width: 12%;background-color:#ec0708;color:#ffff">
+                        <i class="glyphicon glyphicon-list"></i></span>
                     <select wire:model='materia2' class="idMateria2" name="materia2" style='width: 100%' required>
                         <option value="">Selecciona una materia</option>
                         @foreach ($materias as $materia)
@@ -130,6 +133,11 @@
         </div>
     </div>
 </div>
+<script>
+    function limpiarFormulario() {
+        document.getElementById("#select-form").reset();
+    }
+</script>
 <!-- </div>/.container -->
 
 <script>
