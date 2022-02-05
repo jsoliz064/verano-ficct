@@ -8,7 +8,7 @@
         <div class="menu inline-flex" id="show-menu">
             <nav>
                 <ul>
-                    <li @if (Request::url() == route('inicio'))  class="menu-selected" @endif>
+                    <li @if (Request::url() == route('inicio'))  @endif>
                         <a @if (Request::url() != route('inicio')) href="{{ route('inicio') }}" class="text-menu-selected text-inline" @else disabled=true class="text-inline text-selected" @endif>
                             <i class="fas fa-home"></i>Inicio</a>
                     </li>
@@ -90,48 +90,3 @@
 
 
 <script src="{{ asset('js/menu.js') }}"></script>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    header {
-        font-family: Helvetica;
-        width: 480px;
-        margin: 0 auto;
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    #menu li>a {
-        background-color: grey;
-        color: white;
-        padding: 10px;
-        display: block;
-        text-decoration: none;
-        min-width: 100px;
-    }
-
-    #menu li>a:hover {
-        color: #000;
-        background-color: #eaeaea;
-    }
-
-    #menu>li {
-        float: left;
-        text-align: center
-    }
-
-    #menu>li>ul {
-        display: none;
-    }
-
-    #menu>li:hover>ul {
-        display: block;
-    }
-
-</style>

@@ -44,12 +44,11 @@
 
     <!-- Loading screen -->
 
-
-
-
-    @yield('content')
-
-
+    <div class="flex flex-col flex-1 h-full overflow-hidden">
+    </div>
+    <main class="flex-1 max-h-full p-5 py-1 overflow-hidden overflow-y-scroll">
+        @yield('content')
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>

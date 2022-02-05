@@ -123,15 +123,16 @@
                             <div
                                 class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
                                 <h2 class="text-3xl mb-3">Desarrollador Frontend</h2>
-                                <!--<p class="text-lg">
+                                <h4>& Investigador en el área de Seguridad Informática
+                                    <!--<p class="text-lg">
                                     <b class="font-bold"> Edad:</b> 21 años
                                 </p>-->
-                                <p class="text-lg">
-                                    <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
-                                </p>
-                                <p class="text-lg">
-                                    <b class="font-bold"> Semestre:</b> Séptimo
-                                </p>
+                                    <p class="text-lg">
+                                        <b class="font-bold"> Carrera:</b> Ingeniería en Sistemas
+                                    </p>
+                                    <p class="text-lg">
+                                        <b class="font-bold"> Semestre:</b> Séptimo
+                                    </p>
 
                             </div>
                             <div
@@ -139,6 +140,7 @@
                                 <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
                                 <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
                                     src="{{ asset('imagenes/luishiño.png') }}" alt="User avatar">
+                                <p>Hola, soy</p>
                                 <p class="capitalize text-xl mt-1">Luishiño Pericena</p>
                                 <span
                                     class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12">
