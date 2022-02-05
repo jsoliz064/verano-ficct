@@ -9,6 +9,8 @@
     text-decoration: none;
     font-family: sans-serif;
 }
+
+
 /* BACKGROUND ===================================  */
 
 .background {
@@ -42,7 +44,11 @@
     opacity: 0.6;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
+
+
 /* BACKGROUND ===================================  */
+
+
 /* FORMULARIO =================================== */
 
 .page-formulario {
@@ -51,6 +57,8 @@
             */
     position: relative;
 }
+
+
 /*contenedor del formulario*/
 
 .container-form {
@@ -60,6 +68,8 @@
     min-width: 324px;
     margin: 20px auto 0px;
 }
+
+
 /*contenedor del formulario*/
 
 .formulario-div {
@@ -78,8 +88,12 @@
     border: 1px solid #ccc;
     background-repeat: no-repeat;
 }
+
+
 /* BACKGROUND 
     */
+
+
 /*contenedor del formulario*/
 
 .swal2-popup {
@@ -92,13 +106,19 @@
     max-width: 510px;
     min-width: 324px;
 }
+
+
 /*contenedor del formulario*/
+
+
 /* HEADER */
 
 .header2 {
     opacity: 0.9;
     width: auto;
 }
+
+
 /* imagene-logo */
 
 .imagen {
@@ -115,6 +135,8 @@
     box-shadow: 0px 0px 50px 8px #ec3d1e;
     -webkit-box-shadow: 0px 0px 50px 8px #ec361e;
 }
+
+
 /* imagene-logo */
 
 .form-title {
@@ -123,7 +145,8 @@
     /* font-weight: bold;
             */
     opacity: 0.9;
-    font-family: "Gudea", sans-serif;
+    font-family: 'Gudea', sans-serif;
+    font-weight: bold;
 }
 
 .texto.ficct p {
@@ -152,15 +175,17 @@
     letter-spacing: 5px;
     font-family: "Fjalla One", sans-serif;
     font-family: cursive;
-    transform: translateX(-35%) rotate(-35deg);
+    transform: translateX(-45%) rotate(-45deg);
     display: block;
-    left: 80%;
+    left: 95%;
     position: relative;
-    font-size: 18px;
+    font-size: 15px;
     top: 0px;
     color: #ef940a;
     font-weight: bold;
 }
+
+
 /* letra escribe automaticamente */
 
 .hidden {
@@ -168,8 +193,8 @@
 }
 
 .console-container {
-    font-family: "Khula";
-    font-size: 20px;
+    font-family: 'Khula';
+    font-size: 18px;
     display: block;
     top: 0;
     margin: auto;
@@ -184,8 +209,10 @@
     color: rgb(246, 241, 241);
     top: -0.14em;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
+
+
 /* INPUT */
 
 .icone {
@@ -219,19 +246,6 @@
 #show-password {
     cursor: pointer;
 }
-/* EXTRAS */
-
-.remember {
-    margin-top: 15px;
-}
-
-.remember a {
-    float: right;
-}
-
-.remember span {
-    vertical-align: top;
-}
 
 .form-control2 {
     width: 100%;
@@ -240,6 +254,8 @@
     font-size: 14px;
     color: #030303;
 }
+
+
 /* BOTOES */
 
 .btn-login {
@@ -256,6 +272,8 @@
     background: #f36d6d;
     color: #ffffff;
 }
+
+
 /* BOTOES */
 
 @media (max-width: 261px) {
@@ -269,6 +287,8 @@
         display: none !important;
     }
 }
+
+
 /*alerta*/
 
 .container-all {
@@ -336,16 +356,6 @@
     list-style: none;
 }
 
-.menu-selected:before {
-    content: "";
-    width: 100%;
-    height: 4px;
-    background: #fcf100;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .menu nav ul li a {
     color: #ffffff;
     font-size: 16px;
@@ -375,7 +385,7 @@
 
 .menu .text-selected {
     width: auto;
-    color: red;
+    color: #d15238;
 }
 
 #icon-menu {
@@ -401,12 +411,34 @@
     background-color: #ffffff;
     color: #7f1d1d;
 }
-/* Portada Principal
-.icon-menu a.active {
-    background-color: #FF3232;
-    color: #fff;
+
+
+/* EXTRAS */
+
+.remember {
+    margin-top: 15px;
 }
-*/
+
+.remember a {
+    float: right;
+}
+
+.remember span {
+    vertical-align: top;
+}
+
+
+/*alerta*/
+
+.menu-selected:before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: #fcf100;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .container-cover {
     width: 100%;
@@ -476,6 +508,8 @@
 .container-aside aside button:hover {
     opacity: 0.9;
 }
+
+
 /*Responsive Design - Adaptable a dispositivos móviles*/
 
 @media screen and (max-width: 1220px) {
@@ -523,10 +557,10 @@
         left: 0;
         /*opacity: 0.9;
         background: #fffefe;*/
-        background-color: rgb(44, 43, 43);
+        background-color: rgb(24, 23, 23);
         overflow: hidden;
         transform: translateX(-350px);
-        box-shadow: 10px 0 20px -25px rgb(246, 245, 245);
+        /*box-shadow: 10px 0 20px -25px rgb(246, 245, 245);*/
         transition: all 300ms cubic-bezier(1, 0, 0, 1);
     }
     .show-lateral {
@@ -555,7 +589,7 @@
         width: 20px;
         display: inline-block;
         margin-right: 7px;
-        color: #7f1d1d;
+        color: #ffff;
     }
     .menu-selected::before {
         content: "";

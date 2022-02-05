@@ -42,7 +42,9 @@
 
 
     <!-- Loading screen -->
+    <div class="container-all" id="move-content">
 
+    </div>
 
     <main class="flex-1 max-h-full bg-gray-200 p-5 py-1 overflow-hidden overflow-y-scroll">
         @yield('content')
