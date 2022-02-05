@@ -15,12 +15,10 @@
     {{--  MODERATE PRIMO  --}}
 
     <div class="card-body table-responsive">
-        {{-- @auth() --}}
-        <button wire:click="crear()" class="btn btn-primary">Registrar Materia</button>
-        {{-- @endauth --}}
-        @if ($modal)
-            @include('livewire.crearmateria')
-        @endif
+        @auth()
+            <button wire:click="crear()" class="btn btn-primary">Registrar Materia</button>
+        @endauth
+        
         <table class="table table-striped table-bordered shadow-lg mt-4">
             <thead>
                 <tr style="background-color:#050505;color:#ffff">
