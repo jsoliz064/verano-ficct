@@ -18,21 +18,19 @@ use App\Http\Controllers\MateriaController;
 */
 
 Route::get('/', function () {
-    return view('prueba');
+    return view('inicio');
 })->name('inicio');
 
 Auth::routes();
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('prueba');
+    return view('inicio');
 })->name('dashboard');
 
 Route::get('salir', function () {
     auth()->logout();
     return redirect()->route('inicio');
 })->name('user.logout');
-
-/* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 
 Route::get('materias', function () {
     return view('materia.index');

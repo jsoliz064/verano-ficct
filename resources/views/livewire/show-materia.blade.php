@@ -1,4 +1,4 @@
-<div style="overflow: hidden">
+<div style="overflow: hidden" class="my-5">
     <x-table>
         <div class="my-5 bg-gray-200">
 
@@ -25,13 +25,14 @@
                 </div>
                 <x-jet-input type="text" class="flex-1 mr-3 rounded-full w-full py-2 px-4 text-md"
                     placeholder="Escriba el nombre de la materia" wire:model="search" />
-
+                @auth()
                 <x-jet-danger-button
                     class="font-bold text-white text-md bg-red-500 rounded cursor-pointer hover:bg-red-600 py-2 px-4 "
                     wire:click="$set('open', true)"> Registrar
                 </x-jet-danger-button>
+                @endauth
             </div>
-            {{-- @auth() --}}
+            
 
             @if (count($materiasa))
                 <table class=" table table-striped min-w-full divide-y divide-gray-200 text-md shadow-lg mt-4 border-5">
@@ -91,27 +92,27 @@
                                 </td>
                                 <td class=" inline-flex justify-center px-6 py-4 whitespace-nowrap flex">
                                     @can('admin')
-                                        <div class="whitespace-nowrap flex">
+                                        <div class="my-3 whitespace-nowrap flex">
                                             <a class="ml-2 font-bold text-white rounded cursor-pointer bg-indigo-600 hover:bg-indigo-500 py-2 px-4"
                                                 href="{{ route('materia.estudiantes.show', $materia->id) }}">
                                                 <i class="fas fa-users"></i>
                                             </a>
                                         </div>
-                                        <div class="whitespace-nowrap flex">
+                                        <div class="my-3 whitespace-nowrap flex">
                                             <a wire:click="edit({{ $materia->id }})"
                                                 class="ml-2 font-bold text-white rounded cursor-pointer bg-gray-600 hover:bg-gray-700 py-2 px-4">
                                                 <i class=" fas fa-edit"></i>
                                             </a>
                                         </div>
                                     @endcan
-                                    <div class=" m-3 whitespace-nowrap flex">
+                                    <div class=" my-3 whitespace-nowrap flex">
                                         <a href="{{ $materia->grupo }}"
                                             class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
                                             <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                         </a>
                                     </div>
                                     @can('admin')
-                                        <div class="whitespace-nowrap flex">
+                                        <div class=" my-3 whitespace-nowrap flex">
                                             <a wire:click.prevent="eliminar({{ $materia->id }})"
                                                 class="ml-2 font-bold text-white rounded cursor-pointer bg-red-600 hover:bg-red-500 py-2 px-4"
                                                 onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">

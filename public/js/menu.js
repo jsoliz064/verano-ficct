@@ -1,3 +1,10 @@
+  document.getElementById("icon-menu").addEventListener("click", mostrar_menu);
+
+  function mostrar_menu() {
+      document.getElementById("move-content").classList.toggle('move-container-all');
+      document.getElementById("show-menu").classList.toggle('show-lateral');
+  }
+
   $(document).ready(function() {
       $('#contact_form').bootstrapValidator({
               // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -119,11 +126,3 @@
               }, 'json');
           });
   });
-
-
-  document.getElementById("icon-menu").addEventListener("click", mostrar_menu);
-
-  function mostrar_menu() {
-      document.getElementById("move-content").classList.toggle('move-container-all');
-      document.getElementById("show-menu").classList.toggle('show-lateral');
-  }
