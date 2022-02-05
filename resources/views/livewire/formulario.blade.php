@@ -16,7 +16,7 @@
                 </div>
 
                 <p class="textoficct"> ⚡Bienvenido al formulario ⚡<br>
-                    para habilitar tu materia rellena los campos vacio . 📚 <br>
+                    para habilitar tu materia rellena los campos vacíos . 📚 <br>
                 </p>
 
             </center>
