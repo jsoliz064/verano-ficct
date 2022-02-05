@@ -124,7 +124,7 @@
                 </div>
                 <center>
                     <h5>Facultad
-                        de Ingeniera en Ciencias de la Computación.</h5<<<<<cAaaa>
+                        de Ingeniera en Ciencias de la Computación.</h5>
                 </center>
             </form>
         </div>
