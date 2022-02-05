@@ -38,7 +38,7 @@
 
                         <div class="h-full md:w-full pt-8 ">
                             <div
-                                class="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
+                                class=" mt-8 background-card rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
                                 <h2 class="text-3xl mb-3">Desarrollador Frontend</h2>
                                 <!--<p class="text-lg">
                                     <b class="font-bold"> Edad:</b> 21 años
@@ -61,7 +61,7 @@
                                 <div style="white-space: nowrap">
                                     <a href="https://wa.me/59171310964?text=Hola,%20necesito%20ayuda!" target="_blank">
                                         <button
-                                            class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
+                                            class="rounded-md whatsapp-button text-xl text-white pt-3 pb-4 px-8 inline">
                                             Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
                                     </a>
                                 </div>
@@ -78,7 +78,7 @@
 
                         <div class="mx-5 h-full grid place-content-center">
                             <div
-                                class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
+                                class="mt-8 background-card rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
                                 <h2 class="text-3xl mb-3">Desarrollador Backend</h2>
                                 <!--<p class="text-lg">
                                     <b class="font-bold"> Edad:</b> 22 años
@@ -99,8 +99,7 @@
                                 <p class="capitalize text-xl mt-1 mb-5">José Daniel Soliz</p>
 
                                 <div style="white-space: nowrap">
-                                    <button
-                                        class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
+                                    <button class="rounded-md whatsapp-button text-xl text-white pt-3 pb-4 px-8 inline">
                                         Enviar un mensaje <i class="fa fa-whatsapp" aria-hidden="true"></i></button>
                                 </div>
                             </div>
@@ -115,7 +114,7 @@
 
                         <div class="mx-5 h-full grid place-content-center">
                             <div
-                                class="mt-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
+                                class="mt-8 background-card rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
                                 <h2 class="text-3xl mb-3">Desarrollador Frontend</h2>
                                 <h4>& Investigador en el área de Seguridad Informática
                                     <!--<p class="text-lg">
@@ -140,7 +139,7 @@
                                 <div style="white-space: nowrap">
                                     <a href="https://t.me/user12p" target="_blank">
                                         <button
-                                            class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">
+                                            class="rounded-md telegram-button text-xl text-white pt-3 pb-4 px-8 inline">
                                             Enviar un mensaje <i class="fa fa-telegram" aria-hidden="true"></i></button>
                                     </a>
                                 </div>
