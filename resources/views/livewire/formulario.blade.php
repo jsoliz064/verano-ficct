@@ -15,8 +15,8 @@
                     <div class='console-underscore' id='console'>|</div>
                 </div>
 
-                <p class="textoficct"> ⚡Bienvenido al formulario ⚡<br>
-                    para habilitar tu materia rellena los campos vacio . 📚 <br>
+                <p class="textoficct"> ⚡Bienvenido ⚡<br>
+                    Para habilitar tus materias 📚 <br>Registra tus datos en este formulario
                 </p>
 
             </center>
@@ -139,6 +139,13 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
 <script>
     function limpiarFormulario() {
         document.getElementById("#select-form").reset();
