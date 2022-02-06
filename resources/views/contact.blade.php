@@ -96,7 +96,7 @@
                                 <h2 class="font-semibold text-2xl mb-6">Contactar</h2>
                                 <img class="w-40 h-40 object-cover rounded-full mx-auto shadow-lg"
                                     src="{{ asset('imagenes/daniel2.png') }}" alt="User avatar">
-                                <p class="capitalize text-xl mt-1 mb-5">José Daniel Soliz</p>
+                                <p class="capitalize text-xl mt-1 mb-5">José Daniel Soliz (Owner)</p>
 
                                 <div style="white-space: nowrap">
                                     <a href="https://wa.me/59169086228?text=Hola,%20necesito%20ayuda" target="_blank">
