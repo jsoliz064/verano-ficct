@@ -14,7 +14,7 @@ class EstudianteSeed extends Seeder
      */
     public function run()
     {
-        Estudiante::create([
+        $estudiante=Estudiante::create([
             'registro'=> '218075881',
             'nombre'=> 'Jose Daniel Soliz Supayabe',
             'carrera_id'=> 1,
