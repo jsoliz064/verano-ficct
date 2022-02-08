@@ -31,7 +31,6 @@
         @yield('title','Verano')
     </title>
     {asset(@livewireStyles())}
-    {asset(@livewireScripts())}
     
     {{--  <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>
     <script src="{{ asset('vendor/livewire/livewire.js.map') }}"></script>  --}}
@@ -54,6 +53,7 @@
         @yield('content')
     </main>
 
+    {asset(@livewireScripts())}
     
     @stack('js')
 
