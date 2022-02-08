@@ -81,7 +81,7 @@
 
                                     @endif
                                 </td>
-                                <td class="px-8 py-6 text-md text-gray-500 font-bold">
+                                <td class="px-8 py-6 text-md text-gray-500 font-bold" style="white-space: nowrap">
                                     @if ($materia->inscritos == null)
                                         <span class="px-2 my-4 rounded-full inline-flex text-white bg-gray-500">
                                             Sin inscritos
