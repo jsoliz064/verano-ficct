@@ -33,6 +33,9 @@
 
     @livewireStyles
     @livewireScripts
+    <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>
+    <script src="{{ asset('vendor/livewire/livewire.js.map') }}"></script>
+
 
 </head>
 
