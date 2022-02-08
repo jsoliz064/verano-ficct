@@ -30,12 +30,9 @@
     <title>
         @yield('title','Verano')
     </title>
-    {asset(@livewireStyles())}
-    
-    {{--  <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>
-    <script src="{{ asset('vendor/livewire/livewire.js.map') }}"></script>  --}}
 
-
+    @livewireStyles()
+    @livewireScripts()
 </head>
 
 <body>
@@ -52,9 +49,6 @@
     <main class="flex-1 max-h-full bg-gray-200 p-5 py-1 overflow-hidden overflow-y-scroll">
         @yield('content')
     </main>
-
-    {asset(@livewireScripts())}
-    
     @stack('js')
 
 </body>
