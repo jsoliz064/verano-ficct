@@ -2,7 +2,7 @@
     <x-table>
         <div class="card my-5 pt-8">
             <div align="center" class="py-8 font-bold text-xl underline">
-                <h1> LISTA DE USUARIOS</h1>
+                <h1> LISTA DE ESTUDIANTES</h1>
             </div>
         </div>
         <div class="card-header">
