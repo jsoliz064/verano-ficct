@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/livewire.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a4b5036150.js" crossorigin="anonymous"></script>
@@ -23,9 +24,8 @@
     <title>
         @yield('title','Verano')
     </title>
-    @livewireScripts()
-    @livewireStyles()
-    @livewireAssets()
+    @livewireScripts
+    @livewireStyles
     @stack('js')
 </head>
 
