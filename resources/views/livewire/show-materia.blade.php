@@ -107,7 +107,7 @@
                                     @endcan
                                     <div class=" my-3 whitespace-nowrap flex">
                                         @if ($materia->grupo)
-                                            <a href=""
+                                            <a href="{{$materia->grupo}}"
                                                 class="ml-2 font-bold text-white rounded cursor-pointer bg-green-500 hover:bg-green-600 py-2 px-4">
                                                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                             </a>
