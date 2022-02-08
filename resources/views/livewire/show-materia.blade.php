@@ -5,7 +5,7 @@
             <div class=" my-5 pt-8">
                 <form action="">
                     <div align="center" class="py-8 font-bold text-xl underline">
-                        <h1> OFERTA DE MATERIAS VERENO 3/2021</h1>
+                        <h1> OFERTA DE MATERIAS VERANO 3/2021</h1>
                     </div>
                 </form>
             </div>
