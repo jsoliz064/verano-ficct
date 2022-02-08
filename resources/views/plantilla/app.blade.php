@@ -24,15 +24,9 @@
     <title>
         @yield('title','Verano')
     </title>
-<<<<<<< HEAD
     @livewireScripts
     @livewireStyles
     @stack('js')
-=======
-
-    @livewireStyles()
-    @livewireScripts()
->>>>>>> 25cbedf8d87508f8df7fb1505304fe437a0618be
 </head>
 
 <body>
@@ -43,11 +37,6 @@
     <main class="flex-1 max-h-full bg-gray-200 p-5 py-1 overflow-hidden overflow-y-scroll">
         @yield('content')
     </main>
-<<<<<<< HEAD
-=======
-    @stack('js')
-
->>>>>>> 25cbedf8d87508f8df7fb1505304fe437a0618be
 </body>
 
 </html>
